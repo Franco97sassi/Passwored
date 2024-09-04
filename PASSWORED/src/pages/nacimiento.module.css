@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+ .container{
+    /* height: 150vh; */
+    background: linear-gradient(
+        to bottom,
+        #FFFFFF 0%,  /* Blanco al 0% */
+        #EEE8FB 50%, /* Lila al 50% */
+        rgba(253, 194, 49, 0.58) 100% /* Amarillo semitransparente al 100% */
+    );
+ padding-left: 0%;
+  /* padding-right: 7.34%; */
+ 
+ width: 100%;
+    /* padding-right: 10%;  */
+;}
+.seccion1{
+    /* height: 66%;  */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+      width: 100%;
+}
+.imgContainer{
+   /* background-color: red; */
+   width: 40%;
+}
+.seccion2{
+   padding-left: 5%;
+    height: 34%; 
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    width: 62%;
+    /* background-color: blue; */
+
+ }
+.seccion2 p {
+   text-align: left;
+   font-family: 'Inter', sans-serif;
+font-weight: 400;
+ 
+}
+ 
+
+ .content{
+   /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     padding-left: 0%;
+    /* align-self: flex-start; */
+    width: 50%;
+      
+ }
+.seccion2 h2{
+   padding: 0;
+}
+ .content p{
+   
+    text-align: left;
+    font-size: 19px;
+    width: 75%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+ }
+ .content h2{
+   margin: 0;
+   padding: 0;
+   padding-top:5%;
+   align-self: center;
+    font-size: 48px;
+    width: 75%;
+    font-family: 'Montserrat', sans-serif;
+font-weight: 600;
+    margin: 0; /* Asegura que no haya márgenes que desalineen el título */
+    align-self: center; /* Alinea el h2 a la izquierda dentro del contenedor .content */
+  }
+ .responsiveImage{
+   width: 100%;
+        align-self: flex-start;
+
+ }
+ .content2{
+   display: none;
+  }
+ @media (min-width: 1919px) {
+   .content p {
+     font-size: 25px;
+   }
+   .content h2{
+     font-size: 64px;
+   }
+   
+ }
+ @media (max-width: 767px) {
+    .seccion1{
+      display: flex;
+      flex-direction: column;
+    }
+    .imgContainer{
+      width: 90%;
+       align-self: center;
+    }
+    .content{
+     display: none;
+    }
+    .content2{
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      padding-left: 5%;
+    }
+    .content2 h2{
+       margin: 0;
+       padding: 3%;
+    }
+    .seccion2{
+      width: 80%;
+    }
+}

@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+.section {
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+   
+}
+.navbar {
+  position: relative; /* O simplemente omitir el position para que siga el flujo natural */
+   z-index: 1; /* Si necesitas que la navbar esté encima de otros elementos */
+}
+
+.section1 {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+
+.star1 {
+  align-self: flex-start;
+  padding-left: 4%;
+  width: 9%;
+}
+.star11 {
+  align-self: flex-start;
+  width: 100%;
+  height: auto;
+}
+.text1 {
+  width: 105%;
+  padding-left: 11%;
+  align-self: flex-start;
+
+  font-size: 48px;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+}
+.star2 {
+  align-self: flex-end;
+  padding-right: 10%;
+  width: 9%;
+}
+.star22 {
+  align-self: flex-end;
+  width: 100%;
+  height: auto;
+}
+.star12 {
+  align-self: flex-end;
+  padding-right: 10%;
+  width: 9%;
+  display: none;
+}
+.star122 {
+  align-self: flex-end;
+  width: 100%;
+  height: auto;
+}
+.star3 {
+  margin-left: 8%;
+}
+.section2 {
+  position: relative;
+  /* width:50% */
+  width: 60%;
+}
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 846px;
+  width: 100%;
+  height: auto;
+}
+
+.backImage {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  height: auto;
+}
+.star21 {
+  display: none;
+}
+@media (min-width: 1919px) {
+  .text1 {
+    font-size: 64px;
+  }
+}
+@media (max-width: 767px) {
+  .text1 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .desc {
+    margin-top: -20px;
+    width: 120%;
+  }
+  .star1 {
+    align-self: flex-start;
+    padding-left: 4%;
+    width: 9%;
+
+    padding-left: 11%;
+  }
+  .star3 {
+    width: 250%;
+  }
+  .star2 {
+    display: none;
+  }
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .star12 {
+    align-self: flex-end;
+    padding-right: 10%;
+    width: 15%;
+    display: flex;
+    margin-top: 20%;
+  }
+  .star1 {
+    margin-top: 50%;
+    width: 15%;
+  }
+  .star21 {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0;
+    width: 150%;
+  }
+  .star21 {
+    position: absolute;
+    right: 0;
+    padding-right: 10%;
+    top: 65%;
+    transform: translateY(-50%);
+    width: 10%;
+  }
+  .star22 {
+    height: 30%;
+    width: auto;
+    margin-top: 10%;
+  }
+}

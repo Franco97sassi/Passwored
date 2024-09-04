@@ -1,0 +1,129 @@
+/* navbar.module.css */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding-left: 4vw;
+  padding-right: 4vw;
+  padding-top: 3.7vh;
+}
+
+.logo {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.links {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.47vw;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.links a p {
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  width: 100%;
+}
+
+/* Estilos para el menú hamburguesa */
+.hamburger {
+  display: none; /* Ocultar el botón en pantallas grandes */
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  position: absolute; /* Posicionar el botón fuera del flujo normal */
+  right: 3rem; /* Ajusta la distancia desde el borde izquierdo */
+  top: 1rem; /* Ajusta la distancia desde la parte superior si es necesario */
+}
+@media (max-width: 767px) {
+  .container {
+    padding: 0 1rem;
+    /* background-color: blue; */
+    height: 10vh;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    height: calc(100vh - 60px); /* Ajusta la altura según sea necesario */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000; /* Asegúrate de que el menú esté por encima */
+  }
+
+  .links.open {
+    transform: translateX(0);
+  }
+
+  .links a p {
+    font-size: 20px;
+    padding: 1rem;
+  }
+
+  .hamburger {
+    display: block; /* Mostrar el botón en pantallas pequeñas */
+  }
+  
+  .hamburger{
+    /* background-color: aqua; */
+  }
+  .logo {
+    /* background-color: aqua; */
+    width: 50%; /* Ajusta el ancho del contenedor del logo en pantallas pequeñas */
+    justify-self: center;
+    align-self: center;
+     /* background-color: aqua; */
+   }
+  
+  .logo .logoimg {
+    
+    width: 50%; /* Asegura que la imagen se ajuste al contenedor */
+    height: auto;
+    }
+}
+
+@media (min-width: 768px) {
+  .container {
+    /* display: flex;
+    justify-content: ;
+    align-items: center; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    /* padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 3.7vh; */
+  }
+  .hamburger {
+    display: none; /* Ocultar el botón en pantallas grandes */
+     
+  }
+ 
+  
+}
