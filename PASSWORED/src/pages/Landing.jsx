@@ -17,9 +17,9 @@ const Landing = () => {
       <div id="inicio">
         <Inicio />
       </div>   
-       {/* <Info/>   
+        <Info/>   
       <Screens />  
-         <Nacimiento />    
+           <Nacimiento />    
        
        <div id="unete">
         <Unete />
@@ -29,7 +29,7 @@ const Landing = () => {
       <Rocket />   
         <div id="contacto">
         <Contact />
-      </div>      */}
+      </div>       
     </>
   );
 };
