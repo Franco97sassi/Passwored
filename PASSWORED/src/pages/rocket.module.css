@@ -51,8 +51,8 @@
     .rocketContainer{
         position: absolute; /* Permite que la imagen se posicione en relación al contenedor */
         bottom: 15vh; /* Cambia el valor de 'bottom' para que el cohete esté más arriba */
-        width: 50%;   
-        height: 75%; 
+        width: 70%;   
+        height: auto; 
         right: 0;
     }
 

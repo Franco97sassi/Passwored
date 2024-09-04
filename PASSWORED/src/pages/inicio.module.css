@@ -8,6 +8,7 @@
   justify-content: space-between;
   width: 100%;
    
+   
 }
 .navbar {
     z-index: 1; /* Si necesitas que la navbar esté encima de otros elementos */
@@ -75,7 +76,7 @@
   top: 0;
   left: 0;
   z-index: 2;
-  height: 846px;
+  /* height: 846px; */
   width: 100%;
   height: auto;
 }
