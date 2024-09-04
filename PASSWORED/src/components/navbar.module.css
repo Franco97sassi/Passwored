@@ -47,7 +47,7 @@
   font-size: 24px;
   cursor: pointer;
   color: white;
-  position: fixed; /* Posicionar el botón fuera del flujo normal */
+  position: absolute; /* Posicionar el botón fuera del flujo normal */
   right: 1rem; /* Ajusta la distancia desde el borde izquierdo */
   top: 0rem; /* Ajusta la distancia desde la parte superior si es necesario */
 }
