@@ -62,7 +62,7 @@ p {
     text-align: left;
   }
   .flex{
-    display: flex;
+    display: none;
   }
   .flex2 {
     display: flex;

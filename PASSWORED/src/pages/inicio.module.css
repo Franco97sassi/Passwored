@@ -10,8 +10,7 @@
    
 }
 .navbar {
-  position: relative; /* O simplemente omitir el position para que siga el flujo natural */
-   z-index: 1; /* Si necesitas que la navbar esté encima de otros elementos */
+    z-index: 1; /* Si necesitas que la navbar esté encima de otros elementos */
 }
 
 .section1 {
@@ -128,7 +127,7 @@
     padding-right: 10%;
     width: 15%;
     display: flex;
-    margin-top: 20%;
+    margin-top: 30%;
   }
   .star1 {
     margin-top: 50%;

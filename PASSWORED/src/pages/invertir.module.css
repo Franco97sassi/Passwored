@@ -94,8 +94,8 @@ font-family: 'Montserrat', sans-serif;
       rgba(159, 110, 215, 0.75) 0%,   
       rgba(254, 220, 136, 1) 100%     
     ), 
-    url('../assets/niñobox.png'); /* Ruta de la imagen */
-    background-size: 130% auto; /* El 120% aumenta el ancho de la imagen */  background-position: center; /* Centra la imagen */
+    url('../assets/backInvertir.jpeg'); /* Ruta de la imagen */
+    background-size: cover; /* El 120% aumenta el ancho de la imagen */  background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
    .boxEvolution p{

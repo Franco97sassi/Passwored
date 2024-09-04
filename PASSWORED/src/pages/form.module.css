@@ -339,7 +339,7 @@ font-weight: 600;
   .box{
   background: linear-gradient(180deg, #9F6ED7 0%, #FEE9B5 100%);
 width: 90%;
-height: 90%;
+height: max-content;
 border-radius: 20px;
 display: flex;
 flex-wrap: wrap;
@@ -347,10 +347,11 @@ justify-content: space-evenly;
 align-items: center;
 padding-bottom: 75%;
 }
+
   .box .inputContainer{
     /* background-color: aqua; */
     width: 90%;
-  height: 15%; 
+  height: 20%; 
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -358,16 +359,22 @@ padding-bottom: 75%;
   align-items: center;
    
   }
+  .box .inputContainer select{
+     width: 105%;
+   
+   
+  }
   .box .inputContainer2{
     /* background-color: aqua; */
-    width: 90%;
-  height:45%; 
+    width: 92%;
+  height:55%; 
   border-radius: 20px;
   display: flex;
   flex-direction: column;
    justify-content: center;
   align-items: center;
-   
+   margin-top: -50px;
+   margin-bottom: -25px;
   }
   .container h2 {
     /* background-color: #9F6ED7; */
@@ -384,6 +391,7 @@ padding-bottom: 75%;
   visibility: hidden;
     font-family: 'Inter', sans-serif;
 display: none;
+margin-top: -200px;
   }
   .box .inputContainerb{
     /* background-color: blue; */

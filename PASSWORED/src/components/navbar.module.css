@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -47,23 +47,28 @@
   font-size: 24px;
   cursor: pointer;
   color: white;
-  position: absolute; /* Posicionar el botón fuera del flujo normal */
-  right: 3rem; /* Ajusta la distancia desde el borde izquierdo */
-  top: 1rem; /* Ajusta la distancia desde la parte superior si es necesario */
+  position: fixed; /* Posicionar el botón fuera del flujo normal */
+  right: 1rem; /* Ajusta la distancia desde el borde izquierdo */
+  top: 0rem; /* Ajusta la distancia desde la parte superior si es necesario */
 }
+
+
 @media (max-width: 767px) {
   .container {
-    padding: 0 1rem;
+     display: flex;
+    
     /* background-color: blue; */
     height: 10vh;
-  }
+     position: absolute;
+     /* background-color: rebeccapurple;  */
+   }
 
   .links {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 60px;
     right: 0;
     background-color: #333;
@@ -83,25 +88,32 @@
     padding: 1rem;
   }
 
-  .hamburger {
-    display: block; /* Mostrar el botón en pantallas pequeñas */
-  }
   
   .hamburger{
     /* background-color: aqua; */
-  }
+    display: block;
+   }
   .logo {
-    /* background-color: aqua; */
-    width: 50%; /* Ajusta el ancho del contenedor del logo en pantallas pequeñas */
+    /* background-color: aqua;   */
+   margin-top:-10px;
+   margin-left:10px;
+    width: 100%; /* Ajusta el ancho del contenedor del logo en pantallas pequeñas */
     justify-self: center;
     align-self: center;
+    height: auto;
      /* background-color: aqua; */
    }
   
-  .logo .logoimg {
+  /* .logo .logoimg {
     
-    width: 50%; /* Asegura que la imagen se ajuste al contenedor */
+    width: 50%;  
     height: auto;
+    } */
+    .logoimg {
+      width: 400px; /* Tamaño más pequeño para dispositivos móviles */
+      height: 250px;
+      margin-left: -135px;
+      transform: scale(0.4);
     }
 }
 

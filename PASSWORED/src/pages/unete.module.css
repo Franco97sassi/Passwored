@@ -201,8 +201,12 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background: none;
-    /* background-color: chartreuse;   */
+    background: linear-gradient(
+      to bottom,
+      #ffffff 0%,
+      #eee8fb 50%,
+      rgba(253, 194, 49, 0.58) 100%
+    );    /* background-color: chartreuse;   */
     /* padding-right: 89px; */
     padding-left: 10px;
     text-align: left;

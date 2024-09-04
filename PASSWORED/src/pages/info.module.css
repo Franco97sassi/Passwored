@@ -164,7 +164,7 @@ h3 {
  .rocket {
    /* background-color: aqua; */
    position: absolute;  
-   bottom: 190px;  
+   top: 700px;  
     width: 55%;   
    height: auto; 
   right: 0;
