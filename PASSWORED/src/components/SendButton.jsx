@@ -4,7 +4,7 @@ import RegisterUser from '../assets/images/RegisterUser'
 
 const SendButton = () => {
   return (
-    <div className={styles.container2}>Enviar</div>
+    <button  className={styles.container2}>Enviar</button >
   )
 }
 
