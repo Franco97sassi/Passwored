@@ -14,22 +14,35 @@ const Contact = () => {
         <h3>Datos de Contacto</h3>
         <div className={styles.flex}>
           <MailIcon />
+          <p>Email:  passwored.com@gmail.com</p>
+        </div>
+        <div className={styles.flex2}>
+          <MailIcon />
           <p>Email:<br/> passwored.com@gmail.com</p>
         </div>
         <div className={styles.flex}>
+          <Phone />
+          <p>Telefono: +54 3874778216</p>
+        </div>{" "}
+         
+        <div className={styles.flex2}>
           <Phone />
           <p>Telefono:<br/> +54 3874778216</p>
         </div>{" "}
         <div className={styles.flex}>
           <LocationIcon />
+          <p>Dirección :Tomas Jofre 179, San Luis -  Argentina</p>
+        </div>
+        <div className={styles.flex2}>
+          <LocationIcon />
           <p>Dirección :<br/> Tomas Jofre 179, San Luis -<br/> Argentina</p>
         </div>
-      </div>
+      </div> 
       <div>
         
         <Footer />
       </div>
-    </div> </div>
+    </div>  </div>
   );
 };
 

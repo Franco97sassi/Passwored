@@ -32,7 +32,11 @@ p {
 .flex {
   display: flex;
   align-items: center;
+ }
+.flex2 {
+  display: none;
 }
+
 @media (min-width: 1919px) {
   .container h3 {
     font-size: 64px;
@@ -40,6 +44,8 @@ p {
   }
   p { 
     font-size: 32px;
+    padding-left: 1%;
+   text-align: left;
   }
 }
 
@@ -50,12 +56,15 @@ p {
     font-weight: 600;
   }
   p {
-    padding-left: 3%;
+    padding-left: 5%;
     font-size: 16px;
     font-weight: 500;
     text-align: left;
   }
-  .flex {
+  .flex{
+    display: flex;
+  }
+  .flex2 {
     display: flex;
     align-items: center;
     width: 100%;

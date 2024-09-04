@@ -14,22 +14,22 @@ const Landing = () => {
   return (
     <>   
             
-      <div id="inicio">
+       <div id="inicio">
         <Inicio />
-      </div>   
+      </div>    
         <Info/>   
       <Screens />  
-           <Nacimiento />    
+          <Nacimiento />    
        
-       <div id="unete">
+        <div id="unete">
         <Unete />
       </div>   
         <Invertir />  
-          <Form />       
-      <Rocket />   
-        <div id="contacto">
+         <Form />       
+          <Rocket />   
+          <div id="contacto">
         <Contact />
-      </div>       
+      </div>         
     </>
   );
 };
