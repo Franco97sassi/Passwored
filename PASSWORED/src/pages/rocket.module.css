@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 .container{
- /* background-color: blueviolet; */
+    /* background-color: blueviolet;     */
     display: flex;
-    /* height: 10vw;   */
+     height: 13.5vw;    
     justify-content: space-between;  
   
   position: relative;
@@ -13,23 +13,40 @@
 }
 .rocketContainer{
     position: absolute; /* Permite que la imagen se posicione en relación al contenedor */
-  bottom: 0; /* Posiciona la imagen en el borde inferior */
+  /* Posiciona la imagen en el borde inferior */
    width: 35%;   
   height: auto; 
  right: 0;
-}
+ bottom: 0;
+ bottom: 50%;
+ transform: translateY(50%); 
+ }
 .rocket{
     width: 100%;
     height: auto;
+    /* position: absolute;
+    bottom: 0;  */
 }
 
-.start{
+/* .star{
     align-self:   flex-end;
     width: 3%;
-}
+    justify-self: flex-end;
+     position: relative;
+} */
+ .star2{
+    /* width: 100%; height: auto; */
+    align-self:   flex-end;
+    width: 3%;
+    justify-self: flex-end;
+    position: absolute; 
+     
 
+}  
 .star22{
     width: 100%; height: auto;
+    position: absolute;
+    bottom:0
 }
 @media (max-width: 767px) {
     .container{
@@ -44,13 +61,15 @@
     }
 
     .star2{
-        
-         
+         width: 10%;
+    }
+    .star22{
+         width: 100%;
     }
 
     .rocketContainer{
         position: absolute; /* Permite que la imagen se posicione en relación al contenedor */
-        bottom: 15vh; /* Cambia el valor de 'bottom' para que el cohete esté más arriba */
+        bottom: 30vh; /* Cambia el valor de 'bottom' para que el cohete esté más arriba */
         width: 70%;   
         height: auto; 
         right: 0;

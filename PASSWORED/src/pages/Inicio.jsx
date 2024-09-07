@@ -1,3 +1,4 @@
+import Navbar from "../components/Navbar";
 import Estrella1 from "../assets/images/Estrella1";
 import Estrella2 from "../assets/images/Estrella2";
 import Button from "../components/Button";
@@ -6,8 +7,7 @@ import fondoInicioColor from "../assets/fondoInicioColor.png";
 import Estrella3 from "../assets/images/Estrella3";
 
 import styles from "./inicio.module.css";
-import Navbar from "../components/Navbar";
-const Inicio = () => {
+ const Inicio = () => {
   return (
     <>  
      <Navbar className={styles.navbar}/>     
@@ -15,7 +15,7 @@ const Inicio = () => {
        
       <div className={styles.section1}>
         <div className={styles.star12}>
-          {" "}
+          
           <Estrella2 className={styles.star122} />
         </div>
         <div className={styles.star1}>
@@ -24,7 +24,7 @@ const Inicio = () => {
 
         <div className={styles.desc}>
           <p className={styles.text1}>
-            App que genera hábitos de lectura, comprensión de textos y mucho
+            App que genera<br/>hábitos de lectura,<br/> comprensión de textos<br/> y mucho
             más.
           </p>
         </div>

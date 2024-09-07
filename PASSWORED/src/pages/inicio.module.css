@@ -1,27 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 
+.navbar {
+
+  z-index: 1; 
+}
 .section {
   overflow-x: hidden;
   position: relative;
   display: flex;
   justify-content: space-between;
   width: 100%;
-   
-   
+
 }
-.navbar {
-    z-index: 1; /* Si necesitas que la navbar esté encima de otros elementos */
-}
+ 
 
 .section1 {
   display: flex;
-
-  flex-direction: column;
+   flex-direction: column;
   justify-content: center;
   width: 40%;
   box-sizing: border-box;
-}
+ }
 
 .star1 {
   align-self: flex-start;
@@ -33,24 +33,30 @@
   width: 100%;
   height: auto;
 }
+
 .text1 {
-  width: 105%;
-  padding-left: 11%;
-  align-self: flex-start;
+  /* width: 105%; */
+  /* padding-left: 20.3%; */
+  /* align-self: flex-start; */
 
   font-size: 48px;
   font-family: "Montserrat", sans-serif;
   text-align: left;
-}
+  font-weight: 400;
+ }
 .star2 {
+  /* background-color: aqua; */
   align-self: flex-end;
-  padding-right: 10%;
+  /* padding-right: 10%; */
   width: 9%;
-}
+  margin-top: -10%;
+ }
 .star22 {
   align-self: flex-end;
   width: 100%;
   height: auto;
+  padding-left: 50%;
+
 }
 .star12 {
   align-self: flex-end;
@@ -64,33 +70,47 @@
   height: auto;
 }
 .star3 {
-  margin-left: 8%;
-}
+  padding-left: 13.5%;}
 .section2 {
   position: relative;
-  /* width:50% */
+  
+   
   width: 60%;
-}
+   }
+   /* .desc{
+    background-color: blueviolet;
+    padding-left: ;
+   } */
 .backgroundImage {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 00;
   z-index: 2;
   /* height: 846px; */
   width: 100%;
   height: auto;
-}
+ }
 
 .backImage {
-  position: relative;
+   position: relative;
   z-index: 1;
-
+  left: 3%;
   width: 100%;
   height: auto;
+  /* position: relative;
+  z-index: 1;
+  right: 1%;
+  top:0%;
+  width: 100%;
+  height: auto; */
 }
 .star21 {
   display: none;
 }
+.desc{
+   width: 131.7%;
+  padding-left: 17.5%;
+ }
 @media (min-width: 1919px) {
   .text1 {
     font-size: 64px;
@@ -119,19 +139,32 @@
     display: none;
   }
   .section1 {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-end; */
+    width: 34%;
+  }
+  .section2 {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-end; */
+    width: 66%;
+    height: auto;
   }
   .star12 {
     align-self: flex-end;
-    padding-right: 10%;
+    margin-right: -20%;
     width: 15%;
     display: flex;
-    margin-top: 30%;
+   padding-top: 80%;   
+     
+   }
+  .star122{
+
   }
   .star1 {
     margin-top: 50%;
+    margin-left: 10%;
     width: 15%;
   }
   .star21 {
@@ -139,18 +172,44 @@
     justify-content: flex-end;
     margin-right: 0;
     width: 150%;
-  }
+   }
   .star21 {
     position: absolute;
     right: 0;
     padding-right: 10%;
-    top: 65%;
-    transform: translateY(-50%);
-    width: 10%;
+    top: 60%;
+    /* transform: translateY(-100%); */
+    width: 20%;
+    margin-top: 10%;
+
   }
   .star22 {
-    height: 30%;
-    width: auto;
-    margin-top: 10%;
+    height:  auto;
+    width: 100%;
+   }
+   .backgroundImage {
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    z-index: 2;
+    /* height: 846px; */
+    width: 100%;
+    height:60%;
+   }
+  
+  .backImage {
+     position: relative;
+    z-index: 1;
+    top: 5%;
+    left: 13%;
+    width: 100%;
+    height: 60%;
+    
+    /* position: relative;
+    z-index: 1;
+    right: 1%;
+    top:0%;
+    width: 100%;
+    height: auto; */
   }
 }

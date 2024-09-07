@@ -7,10 +7,10 @@ const Info = () => {
   return (
     <div className={styles.container}>
         
-      <div className={styles.star}>
+      <div className={styles.starSection}>
         <Estrella3 className={styles.star1} />
       </div>
-      <div className={styles.section1}>
+      <div className={styles.passwored}>
         <p className={styles.subtitle}>¿Qué es PASSWORED?</p>
         <p className={styles.text}>
           PASSWORED es una aplicación que bloquea el acceso a las demás
@@ -37,7 +37,7 @@ const Info = () => {
             className={styles.rocket2}
           /> </div>
    </div>
-      <div className={styles.section2}>
+      <div className={styles.resultados}>
          
           <p className={styles.subtitle}>Resultados</p>
           <p className={styles.text}>
@@ -58,7 +58,7 @@ const Info = () => {
          
       </div>
        
-      <div className={styles.section3}>  
+      <div className={styles.rocketStar}>  
         <div className={styles.star2}>  
           <Estrella1 className={styles.star22} />
           </div> 

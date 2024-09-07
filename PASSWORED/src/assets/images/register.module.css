@@ -1,0 +1,21 @@
+.container {
+    width: 29px; /* Tamaño por defecto */
+    height: 31px; /* Tamaño por defecto */
+  }
+  
+  /* Para pantallas con un ancho mínimo de 1920px */
+  @media (min-width: 1919px) {
+    .container {
+      width: 38px; /* Tamaño ajustado para pantallas grandes */
+      height: 40px; /* Tamaño ajustado para pantallas grandes */
+    }
+  }
+  
+  /* Para pantallas con un ancho máximo de 767px */
+  @media (max-width: 767px) {
+    .container {
+      width: 20px; /* Tamaño ajustado para pantallas pequeñas */
+      height: 20px; /* Tamaño ajustado para pantallas pequeñas */
+    }
+  }
+  

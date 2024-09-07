@@ -5,7 +5,7 @@ import styles from "./invertir.module.css";
 const Invertir = () => {
   return (
     <div className={styles.container}>
-      <h2>Por que invertir en nosotros?</h2>
+      <h2>POR QUE INVERTIR EN NOSOTROS?</h2>
       {/* <div className={styles.boxes}> */}
       <div  className={styles.boxes}>
 
@@ -40,10 +40,11 @@ const Invertir = () => {
 <div className={styles.boxEvolution}>  
        <h4>ÚNETE A LA EVOLUCIÓN</h4>
       <p>¿Listo para ser parte de algo grande? 
-        Envianos un mensaje a través de nuestro formulario de contacto o escríbenos directamente
+        Envianos un mensaje a través br de nuestro formulario de contacto o escríbenos directamente
          a contac@passtudy-ia.com</p>
          <div  className={styles.button}>  
-          <ButtonCall/></div></div>
+          <ButtonCall/></div>
+          </div>
            
       
      </div>

@@ -86,7 +86,7 @@ import arrow from "../assets/arrow.png";
         <div className={styles.box}>
           <div className={styles.title2}>
             <h2>03</h2>   
-            <h3> Listo!!!</h3>{" "}</div>
+            <h3>Listo!!!</h3>{" "}</div>
             <div  className={styles.description}>  <p >
             El celular se verá totalmente normal, pero en el momento que el
               niño seleccione una App como por ejemplo Free Fire...{" "}

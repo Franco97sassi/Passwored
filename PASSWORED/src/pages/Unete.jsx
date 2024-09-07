@@ -19,7 +19,7 @@ const Unete = () => {
         <ButtonRegister /></div>
       </div>
       </div>
-      <div>
+      
        
           <div className={styles.unete}>
             <h2>ÚNETE A NOSOTROS</h2>
@@ -54,7 +54,7 @@ const Unete = () => {
             </li>
           </div>
         
-      </div>
+      
     </div>
   );
 };

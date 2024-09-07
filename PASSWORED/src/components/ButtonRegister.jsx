@@ -4,7 +4,7 @@ import RegisterUser from '../assets/images/RegisterUser'
 
 const ButtonRegister = () => {
   return (
-    <div className={styles.container2}> <RegisterUser/> Registrarme</div>
+    <div className={styles.container2}> <RegisterUser/> Registrarme   </div>
   )
 }
 

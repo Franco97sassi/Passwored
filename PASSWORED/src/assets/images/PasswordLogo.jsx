@@ -5,8 +5,8 @@ const PasswordLogo = (props) => {
     <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    width={371}
-     height={102}
+    width={266}
+     height={84}
     fill="none"
     {...props}
   >

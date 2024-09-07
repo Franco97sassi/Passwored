@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from "./phone2.module.css";
+import styles from "./phone21.module.css";
 
-const Phone2 = () => {
+const Phone21 = () => {
   return (
     <svg    className={styles.container}
       width="20" 
@@ -21,4 +21,4 @@ const Phone2 = () => {
   );
 };
 
-export default Phone2;
+export default Phone21;

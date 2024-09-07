@@ -9,6 +9,7 @@ import Form from './Form';
 import Contact from './Contact';
 import Navbar from '../components/Navbar';
 import Rocket from './Rocket';
+import Fondo from './fondo';
 
 const Landing = () => {
   return (
@@ -17,19 +18,20 @@ const Landing = () => {
        <div id="inicio">
         <Inicio />
       </div>    
-        <Info/>   
-      <Screens />  
+          <Info/>   
+       <Screens />  
           <Nacimiento />    
        
-        <div id="unete">
+           <div id="unete">
         <Unete />
       </div>   
-        <Invertir />  
-         <Form />       
-          <Rocket />   
+      {/* <Fondo/> */}
+         <Invertir />    
+           <Form />       
+              <Rocket />   
           <div id="contacto">
-        <Contact />
-      </div>         
+        <Contact />   
+      </div>          
     </>
   );
 };

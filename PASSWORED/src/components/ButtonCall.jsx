@@ -1,11 +1,11 @@
 import React from 'react'
 import Phone from '../assets/images/Phone'
 import styles from "./button.module.css"
-import Phone2 from '../assets/images/Phone2'
+import Phone21 from '../assets/images/Phone21'
 
 const ButtonCall = () => {
   return (
-    <div className={styles.container}> <Phone2/> Contactanos</div>
+    <div className={styles.container}> <Phone21/> Contactanos</div>
   )
 }
 

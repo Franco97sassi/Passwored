@@ -1,9 +1,26 @@
+ 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 .container{
     background-color: #FF6A0F;
     /* width:226px;
     height:67px; */
-    padding: 22px;
-    width: 41%;
+    padding: 4%;
+    width: 35%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 50px;
+    color:white;
+    font-size:20px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+}
+.container2{
+    background-color: #8E2DE2;
+    padding: 21px;
+    width: 15%;
     height: auto;
     display: flex;
     justify-content: space-evenly;
@@ -11,18 +28,10 @@
     border-radius: 50px;
     color:white;
     font-size:1.5rem;
-}
-.container2{
-    background-color: #8E2DE2;
-    padding: 22px;
-    width: 33%;
-    height: 25%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 50px;
-    color:white;
-    font-size:1.5rem;
+    border: none; /* Asegúrate de no tener bordes explícitos */
+    box-shadow: none; /* Elimina cualquier sombra que pueda crear un efecto de borde */
+    font-family: 'Inter', sans-serif;
+
 }
 .container3{
     background-color: #FF6A0F;
@@ -39,7 +48,7 @@
     background-color: #FF6A0F;
     /* width:226px;
     height:67px; */
-    padding: 10px;
+    padding: 15px;
     width: 100%;
     height: auto;
     display: flex;
@@ -47,7 +56,10 @@
     align-items: center;
     border-radius: 50px;
     color:white;
-    font-size:1.5rem;
+    font-size:16px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+
 }
 .pa{
     padding-left:100px;
@@ -55,32 +67,41 @@
 }
 @media (min-width: 1919px) {
     .container{
-         
-        font-size:32px;
+         font-size:32px; 
+    padding: 4%;
+
     }
     .container2{
-         
+        padding: 30px;
         font-size:32px;
+        font-family: "Montserrat", sans-serif;
+        width: 15%;
+
     }
+    
     .container3{
          
         font-size:21px;
     }
+    .container4{
+         
+        font-size:32px;
+    }
   }
   @media (max-width: 767px) {
     .container{
-         
+        width: 45%;
         font-size:16px;
-        padding: 10px;
-
+        padding: 4%;
     }
     .container3{
          
         font-size:16px;
     }
     .container2{
-         
         font-size:16px;
+        width: 35%;
+
     }
     .container4{
          

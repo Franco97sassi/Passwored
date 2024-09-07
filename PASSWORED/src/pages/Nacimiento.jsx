@@ -1,5 +1,6 @@
 import styles from "./nacimiento.module.css";
 import child2 from "../assets/child2.png";
+import Estrella3 from "../assets/images/Estrella3";
 
 const Nacimiento = () => {
   return (
@@ -7,6 +8,9 @@ const Nacimiento = () => {
       <div className={styles.seccion1}>
       <div className={styles.content2} >   
           <h2>¿Cómo nació PASSWORED?</h2>
+          <div className={styles.starSection}>
+        <Estrella3 className={styles.star1} />
+      </div>
         <p  >
           Un compañero tenía un hijo con retraso madurativo; una noche fui a
           visitarlo y observe que el pequeño de 2 años estaba jugando con el
@@ -54,7 +58,7 @@ const Nacimiento = () => {
         </p></div>
       </div>
       <div className={styles.seccion2}>
-      <h2>¿Sabías qué?</h2>
+      <h2>¿Sabías qué...</h2>
       <p>El 80% de los niños entre 2 y 10 años utiliza dispositivos móviles a diario, y que el 60% de ellos lo hace durante más de dos horas?
 Estos datos, extraídos de un estudio realizado por la Universidad de Harvard, revelan que los niños están expuestos a una gran cantidad de estímulos digitales que pueden afectar a su desarrollo cognitivo, emocional y social. Además, muchos de éstos estímulos no son de calidad ni tienen un propósito educativo, sino que sólo buscan entretener o distraer a los niños.
 ¿Qué pasaría si pudiéramos convertir el tiempo de pantalla en tiempo de aprendizaje?, ¿Y si pudiéramos aprovechar el interés de los niños por los dispositivos móviles para enseñarles cosas nuevas y útiles, como matemáticas, comprensión de texto o idiomas? Esa es la idea detrás de PASSWORED.</p>
