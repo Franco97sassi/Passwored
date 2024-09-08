@@ -151,13 +151,14 @@ font-weight: 500;
   }
   @media (max-width: 767px) {
     .container{
-      background-image: none;
+       background-image: none;
          margin-top: -7%;  
-         background-image: url('../assets/fondo1Screen.png'), url('../assets/fondo2Screen.png');
+         background-image: url('../assets/fondoInvertir1.png'), url('../assets/fondoInvertir2.png');
          background-repeat: no-repeat, no-repeat; /* Evita que se repitan ambas imágenes */
-         background-size: contain, 125% auto;  
-  
-   background-position:   top 550px   left,top 500px left;
+         background-size: 200px contain , 200px auto;  
+         background-position:   top 0000px   left,top 00px left;
+         
+   /* background-position:   top 350px   left,top 350px left; */
         /* background-size: 100% auto, contain;  
   
    background-position:   top 500px left,top   left;   */
@@ -165,11 +166,12 @@ font-weight: 500;
         padding-right:  7%;
         /* background-size: 100% 25%;  */
         /* margin-top: -60px; */
-         padding-bottom: 12%;
+         /* padding-bottom: 12%; */
          display: flex;
         flex-direction: column;
           overflow-x: hidden;
     }
+    
     .box p {
      
      font-size: 16px;

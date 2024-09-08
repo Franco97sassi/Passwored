@@ -156,10 +156,10 @@ className={`${styles.box} ${isSelectOpen ? styles.containerOpen  : ""}`}>
    </select>
          </div>
         
-        <div className={styles.inputContainer}>
+         <div className={styles.inputContainer}>
           {" "}
-           <h4>Email</h4>  
-           <input type="email" name="email" placeholder="jperez@gmail.com" value={formData.email} onChange={handleChange} />
+           <h4>Teléfono</h4>  
+           <input type="text" name="phone" placeholder="123456789" value={formData.phone} onChange={handleChange} />
            </div>
         
         <div  className={styles.inputContainer3}>
@@ -168,12 +168,12 @@ className={`${styles.box} ${isSelectOpen ? styles.containerOpen  : ""}`}>
           <input type="text" />
         </div>
         
-        <div className={styles.inputContainer}>
-          {" "}
-           <h4>Teléfono</h4>  
-           <input type="text" name="phone" placeholder="123456789" value={formData.phone} onChange={handleChange} />
-           </div>
         
+           <div className={styles.inputContainer}>
+          {" "}
+           <h4>Email</h4>  
+           <input type="email" name="email" placeholder="jperez@gmail.com" value={formData.email} onChange={handleChange} />
+           </div>
         <div className={styles.inputContainer2}>
         {" "}
            <h4>Deja tu duda o inquietud</h4>  

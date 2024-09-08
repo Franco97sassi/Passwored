@@ -19,7 +19,7 @@
  right: 0;
  bottom: 0;
  bottom: 50%;
- transform: translateY(50%); 
+ transform: translateY(20%); 
  }
 .rocket{
     width: 100%;
@@ -62,11 +62,12 @@
 
     .star2{
          width: 10%;
+         bottom:15%
+
     }
     .star22{
          width: 100%;
-    }
-
+     }
     .rocketContainer{
         position: absolute; /* Permite que la imagen se posicione en relación al contenedor */
         bottom: 30vh; /* Cambia el valor de 'bottom' para que el cohete esté más arriba */
