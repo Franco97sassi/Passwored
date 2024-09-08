@@ -1,9 +1,21 @@
  
 .navbar{
   width:100%;
+  background-color: red;
+}
+
+.container.scrolled {
+  background-color: white; /* Fondo rojo cuando se hace scroll */
+  
+}
+ 
+.container.scrolled p {
+  background-color: white; /* Fondo rojo cuando se hace scroll */
+  color: black;
 }
 .container {
   display: flex;
+  
   justify-content: space-between;
   align-items: center;
   position: fixed;
@@ -11,6 +23,7 @@
   z-index: 1000;
    width: 100%; 
  padding-top: 0%;
+ background-color: transparent; /* Fondo rojo cuando se hace scroll */
 
   /* height: 10vh; */
    top: 0;
@@ -59,9 +72,10 @@
      display: flex;
     
     /* background-color: blue; */
-    height: 10vh;
+    height: 5vh;
      position: fixed;
      /* background-color: rebeccapurple;  */
+     padding-top: 5%;
    }
 
   .links {
@@ -88,7 +102,9 @@
     font-size: 20px;
     padding: 1rem;
   }
+.container .hamburguer{
 
+ }
   
   .hamburger{
     /* background-color: aqua; */
@@ -120,7 +136,13 @@
 }
  
 @media (max-width: 767px) {
-  
+  .container.scrolled p {
+  background-color: #333; /* Fondo rojo cuando se hace scroll */
+  color: white;
+}
+.container.scrolled {
+  background-color: #333; /* Cambiar color a rojo cuando se hace scroll */
+}
   .links {
     display: flex;
     flex-direction: column;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import styles from "./navbar.module.css";
 import PasswordLogo from "../assets/images/PasswordLogo";
@@ -7,6 +7,7 @@ import menu from "../assets/Menu.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleLogoClick = () => {
     window.location.reload(); 
@@ -15,10 +16,23 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = window.pageYOffset;
+      setScrollPosition(position);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div className={styles.navbar}>  
-    <div className={styles.container}>
+ 
+    <div className={`${styles.container} ${scrollPosition > 0 ? styles.scrolled : ''}`}>
       <div className={styles.logo} onClick={handleLogoClick} style={{ cursor: "pointer" }}>
         <PasswordLogo className={styles.logoimg} />
       </div>
