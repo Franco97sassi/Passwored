@@ -17,6 +17,7 @@
   display: flex;
    align-items: center;
    padding-left:1%;
+   
 }
 @media (max-width: 767px) {
   .container {
@@ -40,7 +41,7 @@
  
   
  .logo {
-     width: 100%; /* Ajusta el ancho del contenedor del logo en pantallas pequeñas */
+     width: 75%; /* Ajusta el ancho del contenedor del logo en pantallas pequeñas */
     
     padding-top: 15px;
   }
