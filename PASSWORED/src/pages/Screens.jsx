@@ -160,9 +160,8 @@ import arrow from "../assets/arrow.png";
           <div className={styles.imgContainer}>
             <img src={screen1}    className={styles.img}/>{" "}
           </div>
-        </div> </div>
-       <div className={styles.gradient}>  
-        <div className={styles.box}>
+        </div>  
+         <div className={styles.box}>
           <div className={styles.title2}>
             <h2>02</h2>   
             <h3>Configurar la App</h3>{" "}</div>
@@ -176,7 +175,8 @@ import arrow from "../assets/arrow.png";
           <div  className={styles.imgContainer}>
             <img src={screen2} className={styles.img} />{" "}
           </div>
-        </div>
+        </div></div>
+        <div className={styles.gradient}>  
 
         <div className={styles.box}>
           <div className={styles.title2}>
