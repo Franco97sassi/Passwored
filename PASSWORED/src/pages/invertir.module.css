@@ -5,8 +5,8 @@
 .container{
   background-image: url('../assets/fondo1Screen.png'), url('../assets/fondo2Screen.png');
   background-repeat: no-repeat, no-repeat; /* Evita que se repitan ambas imágenes */
-  background-size: contain, contain; /* Asegura que la imagen cubra todo el contenedor */
-  background-position: top 0% right, top 0% left; /* Primera imagen arriba, segunda abajo */
+  background-size: contain, 105% auto; /* Asegura que la imagen cubra todo el contenedor */
+  background-position: top 0% right, top 5% left; /* Primera imagen arriba, segunda abajo */
  padding-left: 7%;
  padding-right:  7%;
  /* background-size: 100% 25%;  */
@@ -20,10 +20,11 @@
   background-color: #FEDC88;
   margin-left: -10%;
   margin-right:  -8.1%;
-  ;padding-top: 5%;
+  /* ;padding-top: 5%; */
 padding-bottom: 2%;
 padding-left: 10%;
-margin-top: ;
+padding-top: 3%;
+margin-top:0% ;
 }
 .boxes {
      display: flex;
@@ -115,7 +116,7 @@ padding-left: 1%;
       rgba(159, 110, 215, 0.75) 0%,   
       rgba(254, 220, 136, 1) 100%     
     ), 
-    url('../assets/backInvertir.jpeg'); /* Ruta de la imagen */
+    url('../assetsf/backInvertir.jpeg'); /* Ruta de la imagen */
     background-size: cover; /* El 120% aumenta el ancho de la imagen */  background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
    
@@ -152,6 +153,22 @@ font-weight: 500;
     .container{
       background-image: none;
          margin-top: -7%;  
+         background-image: url('../assets/fondo1Screen.png'), url('../assets/fondo2Screen.png');
+         background-repeat: no-repeat, no-repeat; /* Evita que se repitan ambas imágenes */
+         background-size: contain, 125% auto;  
+  
+   background-position:   top 550px   left,top 500px left;
+        /* background-size: 100% auto, contain;  
+  
+   background-position:   top 500px left,top   left;   */
+        padding-left: 7%;
+        padding-right:  7%;
+        /* background-size: 100% 25%;  */
+        /* margin-top: -60px; */
+         padding-bottom: 12%;
+         display: flex;
+        flex-direction: column;
+          overflow-x: hidden;
     }
     .box p {
      
