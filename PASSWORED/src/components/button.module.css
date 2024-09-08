@@ -67,7 +67,7 @@
 }
 @media (min-width: 1919px) {
     .container{
-         font-size:32px; 
+         font-size:24px; 
     padding: 4%;
 
     }
@@ -85,7 +85,7 @@
     }
     .container4{
          
-        font-size:32px;
+        font-size:24px;
     }
   }
   @media (max-width: 767px) {
