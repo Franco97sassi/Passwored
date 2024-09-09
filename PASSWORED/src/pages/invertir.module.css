@@ -61,7 +61,7 @@ border-radius: 20px;
     align-items: flex-start; 
     justify-content: flex-start; 
 padding-left: 6%; */
-font-weight: 500;
+font-weight: 600;
 font-family: 'Montserrat', sans-serif;
 margin-bottom: -1%;
 font-size: 30.4px;
@@ -107,17 +107,18 @@ padding-left: 1%;
      padding-left: 5%;
     width: 85%;
     /* background-color: rebeccapurple; */
-    margin-top: 37%;
+    margin-top: 20%;
     border-radius: 20px;
     padding-bottom: 3%;
     background: 
     linear-gradient(
       to left,
-      rgba(159, 110, 215, 0.75) 0%,   
+      rgba(159, 110, 215, 0.75) 50%,   
       rgba(254, 220, 136, 1) 100%     
     ), 
-    url('../assetsf/backInvertir.jpeg'); /* Ruta de la imagen */
-    background-size: cover; /* El 120% aumenta el ancho de la imagen */  background-position: center; /* Centra la imagen */
+    url('../assets/backInvertir.jpeg'); /* Ruta de la imagen */
+    background-size: cover; /* El 120% aumenta el ancho de la imagen */
+      background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
    
 }
