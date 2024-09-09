@@ -153,11 +153,13 @@ font-weight: 500;
   @media (max-width: 767px) {
     .container{
        background-image: none;
-         margin-top: -7%;  
-         background-image: url('../assets/fondoInvertir1.png'), url('../assets/fondoInvertir2.png');
+         margin-top: -7%;   
+         
+         background-image: url('../assets/fondoInvertir1.png'), url('../assets/fondoInvertir2.png'),
+         linear-gradient(#FEDC88, #FEDC88 400px, transparent 400px, transparent);
          background-repeat: no-repeat, no-repeat; /* Evita que se repitan ambas imágenes */
-         background-size: 200px contain , 200px auto;  
-         background-position:   top 0000px   left,top 00px left;
+         background-size: 00px contain , 00px contain,cover;  
+         background-position:   top 400px   left,top 400px left, top 0px left ;
          
    /* background-position:   top 350px   left,top 350px left; */
         /* background-size: 100% auto, contain;  
@@ -187,23 +189,30 @@ font-weight: 500;
   font-weight: 500;
 }
  .boxEvolution p{
+  width: 100%;
+
   font-size: 20px;
+  margin-left: -7%;
    
  }
  .boxEvolution h4{
-  font-size: 24px;
-padding-right: 5%;
-text-align: center;
-width: 97%;
+  margin: 0;
+  padding: 0;
+  margin-left: -2%;
+  padding-top:15%;
 
- }
-  
+  font-size: 24px;
+/* text-align: left; */
+width: 100%;
+
+  }
  
+  
  .boxEvolution{
   height: max-content;
   width: 155%;
-  
-   }
+  margin-top: 55%;
+    }
  .boxes {
   display: flex;
   flex-direction: column;

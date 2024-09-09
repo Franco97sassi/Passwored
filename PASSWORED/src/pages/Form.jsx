@@ -103,8 +103,9 @@ className={`${styles.box} ${isSelectOpen ? styles.containerOpen  : ""}`}>
   className={isSelectOpen ? styles.moveDown : ""}
   name="message"   value={formData.message} onChange={handleChange} />
            </div> 
-        
-        <div className={`${styles.inputContainer} ${styles.inputMobile}`}>
+           <div            className={`${styles.inputContainer} ${isSelectOpen ? styles.inputMobile : ""}`}>
+
+        {/* <div className={`${styles.inputContainer} ${styles.inputMobile}`}> */}
           {" "}
            <h4>Teléfono</h4>  
            <input type="text" name="phone" placeholder="123456789" value={formData.phone} onChange={handleChange} />

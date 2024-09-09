@@ -75,7 +75,7 @@ const Invertir = () => {
             afines a nuestros valores y una visión distante pero motivadora.
           </p>
         </div>
-        {/* <div className={styles.box}> */}
+         <div className={styles.box123}>  
          <div className={styles.box}>   
 
           <h3>Impacto</h3>
@@ -85,7 +85,7 @@ const Invertir = () => {
             efectiva y a desarrollar habilidades claves para el éxito en el
             futuro.
           </p>
-        </div>  
+        </div>    </div> 
       </div>
       {/* <div className={styles.box2}> */}
       <div  className={styles.evolution} >
