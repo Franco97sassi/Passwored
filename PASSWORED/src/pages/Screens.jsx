@@ -180,8 +180,8 @@ import arrow from "../assets/arrow.png";
         <div className={styles.gradient}>  
 
         <div className={styles.box}>
-          <div className={styles.title2}>
-            <p  className={styles.title1}>03</p>   
+        <div className={`${styles.title2} ${styles.title123}`}>
+        <p  className={styles.title1}>03</p>   
             <p className={styles.subtitle2}> Listo!!!</p>{" "}</div>
             <div  className={styles.description}>  <p >
             El celular se verá totalmente normal, pero en el momento que el
