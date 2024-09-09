@@ -17,6 +17,7 @@
     font-weight: 600;
     font-family: 'Inter', sans-serif;
 }
+ 
 .container2{
     background-color: #8E2DE2;
     padding: 21px;
@@ -27,10 +28,15 @@
     align-items: center;
     border-radius: 50px;
     color:white;
-    font-size:1.5rem;
+    font-size:20px;
     border: none; /* Asegúrate de no tener bordes explícitos */
     box-shadow: none; /* Elimina cualquier sombra que pueda crear un efecto de borde */
     font-family: 'Inter', sans-serif;
+font-weight: 500;
+}
+.container2 div{
+    font-family: 'Inter', sans-serif;
+  font-family: "Montserrat", sans-serif;
 
 }
 .container3{
@@ -73,7 +79,7 @@
     }
     .container2{
         padding: 30px;
-        font-size:32px;
+        font-size:27px;
         font-family: "Montserrat", sans-serif;
         width: 15%;
 

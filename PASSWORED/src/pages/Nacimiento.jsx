@@ -18,10 +18,10 @@ const Nacimiento = () => {
           qué le das el telefono a tu hijo si para muchos padres es
           perjudicial?» A lo que el me respondió: «Con el celular aprende cosas,
           como escribir su nombre».Yo todo incrédulo ¿Escribir su nombre con 2
-          años y retraso madurativo? En ese momento él le pregunto: «¿Como te
+          años y retraso madurativo?   En ese momento él le pregunto: «¿Como te
           llamas?» El niño escribió en la pantalla del celular «GABRIEL». Luego
           le pregunto: «¿Cual es tu número de documento?» sin dudarlo escribió
-          los ocho números.Wow… y no sólo eso!!!, luego le pregunto: «¿Si te
+          los ocho   números.Wow… y no sólo eso!!!, luego le pregunto: «¿Si te
           pierdes como llamas a papá?», a lo que nuevamente escribió los 10
           dígitos sin error alguno. Increible!!! Cómo lo haces? «Muy fácil» me
           respondió «a mi hijo le encanta jugar con el celular, sólo bloqueo el
@@ -43,15 +43,15 @@ const Nacimiento = () => {
           qué le das el telefono a tu hijo si para muchos padres es
           perjudicial?» A lo que el me respondió: «Con el celular aprende cosas,
           como escribir su nombre».Yo todo incrédulo ¿Escribir su nombre con 2
-          años y retraso madurativo? En ese momento él le pregunto: «¿Como te
+          años y retraso madurativo?<br/> En ese momento él le pregunto: «¿Como te
           llamas?» El niño escribió en la pantalla del celular «GABRIEL». Luego
           le pregunto: «¿Cual es tu número de documento?» sin dudarlo escribió
-          los ocho números.Wow… y no sólo eso!!!, luego le pregunto: «¿Si te
+          los ocho <br/> números.Wow… y no sólo eso!!!, luego le pregunto: «¿Si te
           pierdes como llamas a papá?», a lo que nuevamente escribió los 10
           dígitos sin error alguno. Increible!!! Cómo lo haces? «Muy fácil» me
           respondió «a mi hijo le encanta jugar con el celular, sólo bloqueo el
-          teléfono y coloco de contraseña lo que quiero que aprenda, si no lo
-          aprende no puede ingresar a su app favorita».Con esto en mente
+          teléfono y coloco   de contraseña lo que quiero que aprenda, si no lo
+          aprende no puede ingresar a su app favorita».<br/>Con esto en mente
           llegamos a diseñar y crear una App que convierte el tiempo de ocio en
           momentos de aprendizaje.  <br/> <br/>Los niños no aprenden no porque no sean
           capaces, sino porque no reciben el estimulo suficiente para hacerlo.

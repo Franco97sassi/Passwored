@@ -34,6 +34,7 @@
 .imgContainer{
    /* background-color: red;   */
    width: 47.3%;
+   height: auto;
     
 }
 .seccion2{
@@ -58,14 +59,15 @@ font-weight: 400;
  
 
  .content{
-     /* background-color: blue; */
+       /* background-color: blue;  */
     display: flex;
     flex-direction: column;
     align-items: center;
     /* margin-left: -3%; */
     /* align-self: flex-start; */
     width: 52.7%;
- }
+     
+  }
 .seccion2 h2{
    padding: 0;
    font-family: 'Montserrat', sans-serif;
@@ -73,17 +75,22 @@ font-weight: 600;
  
 }
  .content p{
+  padding-right: 0%;
+
     text-align: left;
     font-size: 19px;
     width: 75%;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    
+    padding-left: 5%;
  }
  .content h2{
    margin: 0;
    padding: 0;
-   padding-top:5%;
+   padding-top:10%;
+   padding-bottom:2%;
+   padding-left: 5%;
+ 
    align-self: center;
     font-size: 48px;
     width: 75%;
@@ -96,7 +103,8 @@ font-weight: 600;
    width: 100%;
         align-self: flex-start;
         padding-left: 10.3%;
-
+        height: 100%;
+ 
  }
  .content2{
    display: none;
