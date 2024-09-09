@@ -514,7 +514,7 @@ gap:0;
     .title{
       margin: 0;
    padding: 0;
- 
+ width:"100%";
 background-color:#EEE8FB;
      font-size: 24px;
       padding-left: 6%;
