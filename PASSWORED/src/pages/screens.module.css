@@ -514,7 +514,8 @@ gap:0;
     .title{
       margin: 0;
    padding: 0;
-   
+ 
+backgroundColor:"#EEE8FB"
      font-size: 24px;
       padding-left: 6%;
    padding-bottom: 6%;
