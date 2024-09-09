@@ -18,8 +18,8 @@
   height: auto; 
  right: 0;
  bottom: 0;
- bottom: 50%;
- transform: translateY(20%); 
+ bottom: 0%;
+ transform: translateY(40%); 
  }
 .rocket{
     width: 100%;
@@ -74,8 +74,10 @@
         width: 70%;   
         height: auto; 
         right: 0;
-    }
+        transform: translateY(50%); 
 
+    }
+    
     .rocket{
         width: 100%;
         height:auto;

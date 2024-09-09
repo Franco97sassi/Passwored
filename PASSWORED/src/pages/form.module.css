@@ -22,7 +22,7 @@
 .box{
    background: linear-gradient(180deg, #9F6ED7 0%, #FEE9B5 100%); 
 width: 89%;
-height: 90%;
+height: 80%;
 border-radius: 20px;
 display: flex;
 flex-wrap: wrap;
@@ -76,7 +76,7 @@ transition: height 0.3s ease; /* Transición suave para la altura */
 .box .inputContainer{
   /* background-color: blue; */
 width: 37%;
-height: 10.2%;
+height: 15.2%;
  /* padding-top: 4%; */
 }
 /* .box .inputContainerb{
@@ -272,6 +272,9 @@ margin-left: -9%   ;
   outline: none;
   border: 1px solid white;
 }
+/* .inputMobile{
+  padding-top: 10%;
+} */
   @media (min-width: 1919px) {
     .box .inputContainer h4{
       width: 100%;

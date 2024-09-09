@@ -17,7 +17,12 @@
   display: flex;
    align-items: center;
    padding-left:1%;
-   
+   width: 20%;
+}
+.logoImg {
+  transform: scale(1); /* Ajusta el factor de escala para reducir el tamaño */
+ width: auto; /* Deja que el ancho se ajuste automáticamente */
+ 
 }
 @media (max-width: 767px) {
   .container {
