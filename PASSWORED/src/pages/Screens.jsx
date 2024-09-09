@@ -18,7 +18,7 @@ import arrow from "../assets/arrow.png";
     {
       title: "Actividad",
       description:
-        "Aparecerá una actividad de enseñanza y luego cuatro preguntas relacionadas. Si responde bien tres de ellas... Eureka! ingresará a su App favorita por 20 min.",
+        "Aparecerá una actividad de enseñanza y luego cuatro preguntas relacionadas. Si responde bien tres de ellas...",
       img: screen4,
     },
     {
@@ -150,8 +150,8 @@ import arrow from "../assets/arrow.png";
  
         <div className={styles.box}>
           <div className={styles.title2}>
-            <h2>01</h2> 
-            <h3>Descargar la App</h3>
+            <p className={styles.title1}>01</p> 
+            <p className={styles.subtitle2}>Descargar la App</p>
              </div>
              <div className={styles.description}>  
             <p  >Por el momento solo estará disponible para sistema Android.</p>{" "}
@@ -164,8 +164,8 @@ import arrow from "../assets/arrow.png";
         </div>  
          <div className={styles.box}>
           <div className={styles.title2}>
-            <h2>02</h2>   
-            <h3>Configurar la App</h3>{" "}</div>
+            <p  className={styles.title1}>02</p>   
+            <p className={styles.subtitle2}>Configurar la App</p>{" "}</div>
             <div  className={styles.description}>  <p >
               Seleccionará a qué Apps puede ingresar el niño realizando una
               actividad educativa (casilleros derecha) y qué Apps tendrán una
@@ -181,8 +181,8 @@ import arrow from "../assets/arrow.png";
 
         <div className={styles.box}>
           <div className={styles.title2}>
-            <h2>03</h2>   
-            <h3> Listo!!!</h3>{" "}</div>
+            <p  className={styles.title1}>03</p>   
+            <p className={styles.subtitle2}> Listo!!!</p>{" "}</div>
             <div  className={styles.description}>  <p >
             El celular se verá totalmente normal, pero en el momento que el
               niño seleccione una App como por ejemplo Free Fire...{" "}
