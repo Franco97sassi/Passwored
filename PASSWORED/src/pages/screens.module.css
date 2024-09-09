@@ -45,6 +45,7 @@
      border-radius: 20px;
      /* padding:1% */
      margin-bottom: 4%;
+     padding-bottom: 1%;
    }
    .box2 {
     width: 27%;
@@ -74,12 +75,12 @@
   }
  
   .title2{
-     
-    display: flex;
+     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     height: 25%;
+    width: 100%;
       /* background-color: aqua;    */
   }
   .title2 h2{
@@ -90,22 +91,22 @@
     font-size: 64px;
        /* background-color: aqua; */
        font-family: 'Montserrat', sans-serif;
-       padding-left: 10%;
+       padding-left: 5%;
    }
   .title2 h3{
     margin: 0;
     padding: 0;
     font-weight: 500;
-    font-size: 30.3px;padding-left: 10.4%;
+    font-size: 30.3px;padding-left: 6%;
      width: 100%;
   }
   .title3{
-    height: 15%;
-    padding-left: 1%;  
+    height: 12%;
+    padding-left: 0%;  
     /* background-color: aqua; */
   }
   .title3 h3{
-    padding-left: 10%;
+    padding-left: 5%;
     font-weight: 500;
     font-family: 'Montserrat', sans-serif;
      width: 100%;
@@ -118,6 +119,10 @@
     justify-self: start;
     padding-left: 6%;
     padding-right: 6%;
+
+  }
+  .box2 .description{
+    padding-left: 2%;
 
   }
   .description p{
@@ -151,7 +156,28 @@
     .title {
       font-size: 64px; /* Tamaño de fuente para pantallas de 1920px */
     }
-     
+    .imgContainer{
+      align-self: center;
+      width: 75%;
+   }
+   img{
+    width: 100%;
+    height: auto;
+   }
+    .container{
+      background-image: url('../assets/fondo1Screen.png'), url('../assets/fondo2Screen.png');
+      background-repeat: no-repeat, no-repeat; /* Evita que se repitan ambas imágenes */
+      background-size: contain, contain; /* Asegura que la imagen cubra todo el contenedor */
+      background-position: center 200px, center auto; /* Primera imagen arriba, segunda abajo */
+     padding-left: 10%;
+     padding-right:  10%;
+     /* background-size: 100% 25%;  */
+     /* margin-top: -60px; */
+      padding-bottom: 10%;
+     display: flex;
+     flex-direction: column;
+    
+   }
     .description p{
       font-size: 25px;
       font-weight: 400;
@@ -171,6 +197,13 @@
       font-size: 41px;
       width: 100%;
       padding-left: 10%;
+    }
+    .title2 h3{
+      margin: 0;
+      padding: 0;
+      font-weight: 500;
+      font-size: 41px;padding-left: 6%;
+       width: 100%;
     }
   }
   @media (max-width: 767px) {
@@ -197,8 +230,7 @@
 
   .box2 .description {
     flex: 0 1 50%; /* Esto asegura que la descripción ocupe el 25% de la altura de box2 */
-    background-color: red;
-  }
+   }
     .boxes{
       display: flex;
        flex-direction: column;
