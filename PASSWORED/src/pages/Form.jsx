@@ -3,10 +3,29 @@
 import styles from "./form.module.css";
 import SendButton from "../components/SendButton";
 import { useState } from "react";
-import { useMediaQuery } from "@mui/material";
+import { MenuItem, Select, useMediaQuery } from "@mui/material";
+import { styled } from '@mui/material/styles';
+
 const Form = () => {
   const matches = useMediaQuery('(max-width:600px)')
-
+  const CustomMenuItem = styled(MenuItem)(({ theme }) => ({
+    borderRadius: '0px',
+    '&.Mui-selected': {
+    backgroundColor: '#8e2de2', // Color violeta para la opción seleccionada
+    color: '#fff', // Color del texto blanco para la opción seleccionada
+    '&:hover': {
+      backgroundColor: '#8e2de2', // Aseguramos que el color sea el mismo en hover
+      color: '#fff', // Aseguramos que el texto siga siendo blanco en hover
+    },
+    
+  },
+  
+    '&:hover': {
+      backgroundColor: '#8e2de2', // Color violeta al pasar el ratón
+      color: '#fff', // Color del texto blanco
+    },
+   
+  }));
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
@@ -78,12 +97,66 @@ className={`${styles.box} ${isSelectOpen ? styles.containerOpen  : ""}`}>
         <div className={styles.inputContainer}>
           {" "}
            <h4>Dropdown Title</h4>  
-               <select name="category" value={formData.category} onChange={handleChange} onFocus={handleSelectFocus}
+               {/* <select name="category" value={formData.category} onChange={handleChange} onFocus={handleSelectFocus}
             onBlur={handleSelectBlur}>
     <option value="default" >Quiero probar la app</option>
       <option value="investor">Soy inversionista</option>
      <option value="project">Quiero formar parte de un proyecto</option>
-   </select>
+   </select> */}
+   <Select
+   onFocus={handleSelectFocus}
+            onBlur={handleSelectBlur}
+        name="category"
+        value={formData.category}
+        onChange={handleChange}
+        label="Categoria"
+        MenuProps={{
+          PaperProps: {
+            style: {
+              borderRadius: '10px',
+             marginTop: '0px', // Ajusta el margen superior
+        marginBottom: '0px', // Ajusta el margen inferior
+        padding: '0px', // Ajusta el padding
+       
+            },
+            
+          },
+         
+        }}
+        sx={{
+          borderRadius: '10px',
+          width: '102%',
+          backgroundColor: "white",
+          '& .MuiOutlinedInput-notchedOutline': {
+            border: 'none',  
+             
+          },
+           
+        '& .MuiSelect-select': {
+          fontFamily: 'Noto Sans, sans-serif',
+          fontWeight: 400,
+        },
+        '& .MuiMenuItem-root': {
+          fontFamily: 'Noto Sans, sans-serif',
+          fontWeight: 400,
+        },
+        '& .MuiMenuItem-root.Mui-selected': {
+          backgroundColor: '#8e2de2',
+          color: '#fff',          fontWeight: 400,
+
+        },
+        '& .MuiMenuItem-root:hover': {
+          backgroundColor: '#8e2de2',
+          color: '#fff',          fontWeight: 400,
+
+        },
+        }}
+      >
+        <CustomMenuItem value="default">Quiero probar la app</CustomMenuItem>
+        <CustomMenuItem value="investor">Soy inversionista</CustomMenuItem>
+        <CustomMenuItem value="project">Quiero formar parte de un proyecto</CustomMenuItem>
+      </Select>
+
          </div>
         
         <div    
@@ -103,7 +176,7 @@ className={`${styles.box} ${isSelectOpen ? styles.containerOpen  : ""}`}>
   className={isSelectOpen ? styles.moveDown : ""}
   name="message"   value={formData.message} onChange={handleChange} />
            </div> 
-           <div            className={`${styles.inputContainer} ${isSelectOpen ? styles.inputMobile : ""}`}>
+           <div            className={`${styles.inputContainer} ${isSelectOpen ? styles.moveDownExtra : ""}`}>
 
         {/* <div className={`${styles.inputContainer} ${styles.inputMobile}`}> */}
           {" "}
@@ -155,6 +228,7 @@ className={`${styles.box} ${isSelectOpen ? styles.containerOpen  : ""}`}>
       <option value="investor">Soy inversionista</option>
      <option value="project">Quiero formar parte de un proyecto</option>
    </select>
+    
          </div>
         
          <div className={styles.inputContainer}>

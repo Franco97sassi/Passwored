@@ -1,6 +1,7 @@
  
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&display=swap');
 
 .container{
    
@@ -13,7 +14,9 @@
    transition: height 0.3s ease;
    width: 100%;
  }
- 
+ .moveDownExtra {
+  transform: translateY(10%); /* Mueve el input hacia abajo un 10% adicional */
+}
  .containerOpen {
   height: 125vh; /* Ajusta esta altura según tus necesidades */
   transition: height 0.3s ease;
@@ -127,6 +130,31 @@ height: 15.2%;
   font-weight: 300;
 
 }
+.MuiSelect-root {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+.MuiMenuItem-root {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;color: red;
+}
+
+/* Asegúrate de que el texto de las opciones en el Select esté en la fuente 'Inter' */
+.MuiSelect-select {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300; color: red;
+}
+
+.MuiMenuItem-root.Mui-selected {
+  background-color: #8e2de2;
+  color: #fff;color: red;
+}
+
+.MuiMenuItem-root:hover {
+  background-color: #8e2de2;
+  color: #fff;color: red;
+}
 .box .inputContainer h4{
   width: 100%;
   /* background-color: aquamarine; */
@@ -177,7 +205,10 @@ position: relative;
     font-family: 'Inter', sans-serif;
 
   }
-   
+  .custom-menu-item:hover {
+    background-color: #8e2de2 !important; /* Color violeta al pasar el ratón */
+    color: #fff !important; /* Color del texto blanco */
+  }
   .box select {
     padding-left: 16px;
     width: 100%;
@@ -332,8 +363,24 @@ select {
    color: white;
 }
 
+select {
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde del select */
+  background-color: #fff; /* Fondo del select */
+  color: #333; /* Color del texto */
+}
+select option {
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: #fff; /* Fondo por defecto */
+  color: #333; /* Color del texto */
+}
 
-
+/* Estilo para hover en opciones (esto puede no funcionar en todos los navegadores) */
+select option:hover {
+  background-color: violet; /* Fondo violeta en hover */
+  color: #fff; /* Color del texto en hover */
+}
 
 
   @media (min-width: 1919px) {
