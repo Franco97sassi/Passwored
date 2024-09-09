@@ -147,8 +147,8 @@ import arrow from "../assets/arrow.png";
       <> 
     <div className={styles.b1} > 
     <h2 className={styles.title}> Tan fácil como...</h2>
- 
-        <div className={styles.box}>
+ <div className= {styles.topHalf}  >  
+        <div className={`${styles.box}  `}> 
           <div className={styles.title2}>
             <p className={styles.title1}>01</p> 
             <p className={styles.subtitle2}>Descargar la App</p>
@@ -161,8 +161,8 @@ import arrow from "../assets/arrow.png";
           <div className={styles.imgContainer}>
             <img src={screen1}    className={styles.img}/>{" "}
           </div>
-        </div>  
-         <div className={styles.box}>
+        </div> </div> 
+        <div className= {styles.bottomHalf} >     <div className={`${styles.box}  `}>  
           <div className={styles.title2}>
             <p  className={styles.title1}>02</p>   
             <p className={styles.subtitle2}>Configurar la App</p>{" "}</div>
@@ -176,7 +176,7 @@ import arrow from "../assets/arrow.png";
           <div  className={styles.imgContainer}>
             <img src={screen2} className={styles.img} />{" "}
           </div>
-        </div></div>
+        </div></div> </div> 
         <div className={styles.gradient}>  
 
         <div className={styles.box}>
