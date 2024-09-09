@@ -125,7 +125,7 @@ className={`${styles.box} ${isSelectOpen ? styles.containerOpen  : ""}`}>
         }}
         sx={{
           borderRadius: '10px',
-          width: '102%',
+          width: '102%', height:"60%",
           backgroundColor: "white",
           '& .MuiOutlinedInput-notchedOutline': {
             border: 'none',  
