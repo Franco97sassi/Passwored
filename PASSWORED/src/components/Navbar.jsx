@@ -36,8 +36,8 @@ const Navbar = () => {
       <div className={styles.logo} onClick={handleLogoClick} style={{ cursor: "pointer" }}>
         <PasswordLogo className={styles.logoimg} />
       </div>
-      <div className={styles.hamburger} onClick={toggleMenu}>
-         <img src={menu} alt="" />
+      <div className={`${styles.hamburger} ${scrollPosition > 0 ? styles.scrolled : ''}`} onClick={toggleMenu}>
+        <img src={menu} alt="Menu" />
       </div>
       <div className={`${styles.links} ${isOpen ? styles.open : ''}`}>
         <Link to="inicio" smooth={true} duration={500}>

@@ -162,7 +162,8 @@ import arrow from "../assets/arrow.png";
             <img src={screen1}    className={styles.img}/>{" "}
           </div>
         </div> </div> 
-        <div className= {styles.bottomHalf} >     <div className={`${styles.box}  `}>  
+        {/* <div className= {styles.middle} >a</div> */}
+         <div className= {styles.bottomHalf} >     <div className={`${styles.box}  `}>  
           <div className={styles.title2}>
             <p  className={styles.title1}>02</p>   
             <p className={styles.subtitle2}>Configurar la App</p>{" "}</div>

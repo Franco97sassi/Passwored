@@ -141,7 +141,7 @@
   color: white;
 }
 .container.scrolled {
-  background-color: #333; /* Cambiar color a rojo cuando se hace scroll */
+  background-color: #ffffff; /* Cambiar color a rojo cuando se hace scroll */
 }
   .links {
     display: flex;
@@ -179,6 +179,14 @@
     margin-top: -7.5%;
     padding-right: 3%;
    }
+   .hamburger img {
+    transition: filter 0.3s ease;
+  }
+  
+  .hamburger.scrolled img {
+    filter: invert(1); /* Cambia la imagen a blanco y negro */
+  }
+  
   .logo {
     /* background-color: aqua;   */
    margin-top:5%;
