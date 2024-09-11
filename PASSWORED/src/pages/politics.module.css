@@ -23,22 +23,19 @@
     margin: 0;font-family: 'Inter', sans-serif;
     padding: 0;
     font-size: 24px;
-    padding-bottom: 1%;
-
+    padding-bottom: 0.5%;
 }
  .politicsh3{
     margin: 0;font-family: 'Inter', sans-serif;
     padding: 0;
     font-size: 19px;
-    padding-bottom: 1%;
-
+    padding-bottom: 0.5%;
 }
  .politicsh4{
     margin: 0;font-family: 'Inter', sans-serif;
     padding: 0; 
     font-size: 19px;
-    padding-bottom: 1%;
-
+    padding-bottom: 0
 }
   .politicsp
 {margin: 0;padding: 0; 
@@ -48,7 +45,7 @@ text-align: left; padding-bottom: 1%;
 
 }
 .politicsul{
-
+    margin: 0;padding: 0; padding-bottom: 1%;
 }
 .politicsul li{margin: 0;padding: 0; 
      
@@ -80,19 +77,19 @@ h1,h2,h3,h4{
           .politicsh2{
             margin: 0;font-family: 'Inter', sans-serif;
             padding: 0;
-            font-size: 32px;
+            font-size: 32px; padding-bottom: 0.5%;
          
         }
          .politicsh3{
             margin: 0;font-family: 'Inter', sans-serif;
-            padding: 0;
+            padding: 0;padding-bottom: 0.5%;
             font-size: 24px;
          
         }
          .politicsh4{
             margin: 0;font-family: 'Inter', sans-serif;
             padding: 0; 
-            font-size: 24px;
+            font-size: 24px;padding-bottom: 0%;
          
         }
           .politicsp
@@ -108,7 +105,7 @@ h1,h2,h3,h4{
         .politicsul li{margin: 0;padding: 0; 
              
             font-family: 'Montserrat', sans-serif;
-            font-size: 19px;
+            font-size: 19px;  
          }
     
     
@@ -127,13 +124,13 @@ h1,h2,h3,h4{
             margin: 0;font-family: 'Inter', sans-serif;
             padding: 0;
             font-size: 20px;
-         padding-bottom: 1%;
+         padding-bottom: 5%;
         }
           .politicsh2{
             margin: 0;font-family: 'Inter', sans-serif;
             padding: 0;
             font-size: 14px;
-            padding-bottom: 1%;
+            padding-bottom: 0%;
         
         }
          .politicsh3{
