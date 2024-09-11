@@ -3,7 +3,7 @@ import styles from "./screens.module.css";
 import screen1 from "../assets/box1.png";
 import screen2 from "../assets/screen2.png";
 import screen3 from "../assets/screen3.png";
-import screen4 from "../assets/screen4.png";
+import screen4 from "../assets/4screen.png";
 import screen5 from "../assets/screen5.png";
 import screen6 from "../assets/screen6.png";
 import { useMediaQuery } from "@mui/material"; // Si estás usando Material UI para el hook

@@ -14,11 +14,11 @@ const Contact = () => {
         <h3>Datos de Contacto</h3>
         <div className={styles.flex}>
           <MailIcon />
-          <p>Email:  passwored.com@gmail.com</p>
+          <p>Email:  contac@passwored.com</p>
         </div>
         <div className={styles.flex2}>
           <MailIcon />
-          <p>Email:<br/> passwored.com@gmail.com</p>
+          <p>Email:<br/> contac@passwored.com</p>
         </div>
         <div className={styles.flex}>
           <Phone />

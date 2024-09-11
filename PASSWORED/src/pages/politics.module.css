@@ -1,0 +1,170 @@
+  
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+.container{
+    padding: 6%;
+    padding-top: 12%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: flex-start;
+}
+ /* h1,h2,h3,h4, ul li,p{
+    margin: 0;
+    padding: 0;
+} */
+  .politicsh1{
+    margin: 0;font-family: 'Inter', sans-serif;
+    padding: 0;
+    font-size: 32px;
+ padding-bottom: 1%;
+}
+  .politicsh2{
+    margin: 0;font-family: 'Inter', sans-serif;
+    padding: 0;
+    font-size: 24px;
+    padding-bottom: 1%;
+
+}
+ .politicsh3{
+    margin: 0;font-family: 'Inter', sans-serif;
+    padding: 0;
+    font-size: 19px;
+    padding-bottom: 1%;
+
+}
+ .politicsh4{
+    margin: 0;font-family: 'Inter', sans-serif;
+    padding: 0; 
+    font-size: 19px;
+    padding-bottom: 1%;
+
+}
+  .politicsp
+{margin: 0;padding: 0; 
+    font-family: 'Montserrat', sans-serif;
+font-size: 14px;
+text-align: left; padding-bottom: 1%;
+
+}
+.politicsul{
+
+}
+.politicsul li{margin: 0;padding: 0; 
+     
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+ }
+/* 
+p{
+    font-family: 'Montserrat', sans-serif;
+font-size: 14px;
+text-align: left;
+}
+ul li{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+h1,h2,h3,h4{
+    font-family: 'Inter', sans-serif;
+    /* font-size: 48px; */
+ 
+    @media (min-width: 1919px) {
+         
+        .politicsh1{
+            margin: 0;font-family: 'Inter', sans-serif;
+            padding: 0;
+            font-size: 42px;
+         padding-bottom: 1%;
+        }
+          .politicsh2{
+            margin: 0;font-family: 'Inter', sans-serif;
+            padding: 0;
+            font-size: 32px;
+         
+        }
+         .politicsh3{
+            margin: 0;font-family: 'Inter', sans-serif;
+            padding: 0;
+            font-size: 24px;
+         
+        }
+         .politicsh4{
+            margin: 0;font-family: 'Inter', sans-serif;
+            padding: 0; 
+            font-size: 24px;
+         
+        }
+          .politicsp
+        {margin: 0;padding: 0; 
+            font-family: 'Montserrat', sans-serif;
+        font-size: 19px;
+        text-align: left;  padding-bottom: 1%;
+        
+        }
+        .politicsul{
+            margin: 0;padding: 0; padding-bottom: 1%;
+        }
+        .politicsul li{margin: 0;padding: 0; 
+             
+            font-family: 'Montserrat', sans-serif;
+            font-size: 19px;
+         }
+    
+    
+    }
+    @media (max-width: 767px) {
+        .container{
+            padding: 6%;
+            padding-top: 12%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: flex-start;
+        }
+    
+        .politicsh1{
+            margin: 0;font-family: 'Inter', sans-serif;
+            padding: 0;
+            font-size: 20px;
+         padding-bottom: 1%;
+        }
+          .politicsh2{
+            margin: 0;font-family: 'Inter', sans-serif;
+            padding: 0;
+            font-size: 14px;
+            padding-bottom: 1%;
+        
+        }
+         .politicsh3{
+            margin: 0;font-family: 'Inter', sans-serif;
+            padding: 0;
+            font-size: 12px;
+            padding-bottom: 1%;
+        
+        }
+         .politicsh4{
+            margin: 0;font-family: 'Inter', sans-serif;
+            padding: 0; 
+            font-size: 12px;
+            padding-bottom: 1%;
+        
+        }
+          .politicsp
+        {margin: 0;padding: 0; 
+            font-family: 'Montserrat', sans-serif;
+        font-size: 10px;
+        text-align: left; padding-bottom: 2%;
+        
+        }
+        .politicsul{
+            margin: 0;padding: 0;padding-bottom: 2%;
+        }
+        .politicsul li{margin: 0;padding: 0; 
+             
+            font-family: 'Montserrat', sans-serif;
+            font-size: 9px;
+         }
+    
+    
+    }

@@ -146,6 +146,7 @@
    } */
    .imgContainer{
       align-self: center;
+      height: auto;
    }
    img{
     width: 100%;

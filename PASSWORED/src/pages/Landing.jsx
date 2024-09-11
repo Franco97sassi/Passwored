@@ -10,6 +10,7 @@ import Contact from './Contact';
 import Navbar from '../components/Navbar';
 import Rocket from './Rocket';
 import Fondo from './fondo';
+import Politics from './Politics';
 
 const Landing = () => {
   return (
@@ -29,6 +30,7 @@ const Landing = () => {
          <Invertir />    
            <Form />       
               <Rocket />   
+              <Politics/>
           <div id="contacto">
         <Contact />   
       </div>          

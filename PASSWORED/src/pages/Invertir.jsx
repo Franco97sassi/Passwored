@@ -46,7 +46,7 @@ const Invertir = () => {
        <h4>ÚNETE A LA EVOLUCIÓN</h4>
       <p>¿Listo para ser parte de algo grande? 
         Envianos un mensaje a través br de nuestro formulario de contacto o escríbenos directamente
-         a contac@passtudy-ia.com</p>
+         a contac@passwored.com</p>
          <div  className={styles.button}>  
           <ButtonCall/></div>
           </div>
