@@ -30,7 +30,7 @@ const Landing = () => {
          <Invertir />    
            <Form />       
               <Rocket />   
-              <Politics/>
+              {/* <Politics/> */}
           <div id="contacto">
         <Contact />   
       </div>          

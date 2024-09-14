@@ -1,9 +1,16 @@
 import React from 'react';
 import styles from "./politics.module.css";
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
+import NavbarPolitics from '../components/NavbarPolitics';
+import FooterPolitics from '../components/FooterPolitics';
 
 const Politics = () => {
   return (
+    <> 
+    <NavbarPolitics/>
     <div className={styles.container}>
+      
       <h1 className={styles.politicsh1}>Política de Privacidad de PASSWORED</h1>
 
       <h2 className={styles.politicsh2}>1. Información General</h2>
@@ -108,7 +115,10 @@ const Politics = () => {
       <p className={styles.politicsp}>
         Si tienes preguntas o preocupaciones sobre nuestra política de privacidad, puedes contactarnos a través de  contac@passwored.com .
       </p>
-    </div>
+ 
+    </div>          <FooterPolitics/>
+
+      </>
   );
 };
 

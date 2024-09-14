@@ -1,4 +1,4 @@
-import styles from "./footer.module.css";
+import styles from "./footerpolitics.module.css";
 import PasswordLogo from '../assets/images/PasswordLogo';
 import InstagramIcon from '../assets/images/InstagramIcon';
 import TwitterIcon from '../assets/images/TwitterIcon';
@@ -7,7 +7,7 @@ import TiktokIcon from '../assets/images/TiktokIcon';
 import logopass from "../assets/logopass.png"
 import { Link } from 'react-router-dom'; 
 
-const Footer = () => {
+const FooterPolitics = () => {
   const handleRedirect = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -42,4 +42,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default FooterPolitics

@@ -3,15 +3,14 @@ import styles from "./screens.module.css";
 import screen1 from "../assets/box1.png";
 import screen2 from "../assets/screen2.png";
 import screen3 from "../assets/screen3.png";
-import screen4 from "../assets/4screen.png";
+import screen4 from "../assets/im4-bb.png";
 import screen5 from "../assets/screen5.png";
 import screen6 from "../assets/screen6.png";
 import { useMediaQuery } from "@mui/material"; // Si estás usando Material UI para el hook
-import arrow from "../assets/arrow.png";
 
  const Screens = () => {
   const matches = useMediaQuery('(max-width:600px)')
-  const [currentBox, setCurrentBox] = useState(0);
+  // const [currentBox, setCurrentBox] = useState(0);
 
   // Las cajas que solo se renderizan cuando matches es true
   const box2Content = [
@@ -34,17 +33,17 @@ import arrow from "../assets/arrow.png";
       img: screen6,
     },
   ];
-  const handleNext = () => {
-    if (currentBox < box2Content.length - 1) {
-      setCurrentBox(currentBox + 1);
-    }
-  };
+  // const handleNext = () => {
+  //   if (currentBox < box2Content.length - 1) {
+  //     setCurrentBox(currentBox + 1);
+  //   }
+  // };
 
-  const handlePrev = () => {
-    if (currentBox > 0) {
-      setCurrentBox(currentBox - 1);
-    }
-  };
+  // const handlePrev = () => {
+  //   if (currentBox > 0) {
+  //     setCurrentBox(currentBox - 1);
+  //   }
+  // };
 
   return (
     <>  { !matches?(  
@@ -194,34 +193,61 @@ import arrow from "../assets/arrow.png";
             <img src={screen3} className={styles.img} />{" "}
           </div>
         </div>
-      <div className={styles.mobileContainer}>
+      {/* <div className={styles.mobileContainer}> */}
           <div className={styles.box2}>
             <div className={styles.title3}>
-              <h3>{box2Content[currentBox].title}</h3>
+              <h3>{box2Content[0].title}</h3>
             </div>
             <div className={styles.description}>
-              <p>{box2Content[currentBox].description}</p>
+              <p>{box2Content[0].description}</p>
             </div>
             <div className={styles.imgContainer}>
-              <img src={box2Content[currentBox].img} className={styles.img} alt={box2Content[currentBox].title} />
+              <img src={box2Content[0].img} className={styles.img} alt={box2Content[0].title} />
             </div>
+            
             {/* Flechas de navegación */}
-            <button
+            {/* <button
   className={`${styles.arrow} ${styles.arrowLeft}`}
   onClick={handlePrev}
   disabled={currentBox === 0}
 >
   <img src={arrow} alt="left arrow" className={`${styles.arrowImage} ${styles.flipped}`}  />
-</button>
+</button>  
 <button
   className={`${styles.arrow} ${styles.arrowRight}`}
   onClick={handleNext}
   disabled={currentBox === box2Content.length - 1}
 >
 <img src={arrow} alt="right arrow"className={styles.arrowImage}  />
-</button>
+</button>*/}
           </div>
-        </div>
+          <div className={styles.box2}>
+            <div className={styles.title3}>
+              <h3>{box2Content[1].title}</h3>
+            </div>
+            <div className={styles.description}>
+              <p>{box2Content[1].description}</p>
+            </div>
+            <div className={styles.imgContainer}>
+              <img src={box2Content[1].img} className={styles.img} alt={box2Content[1].title} />
+            </div>
+            
+            
+          </div>
+          <div className={styles.box2}>
+            <div className={styles.title3}>
+              <h3>{box2Content[2].title}</h3>
+            </div>
+            <div className={styles.description}>
+              <p>{box2Content[2].description}</p>
+            </div>
+            <div className={styles.imgContainer}>
+              <img src={box2Content[2].img} className={styles.img} alt={box2Content[2].title} />
+            </div>
+            
+            
+          </div>
+        {/* </div> */}
         </div>
         </>
     )}</>

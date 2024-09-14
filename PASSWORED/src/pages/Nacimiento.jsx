@@ -1,6 +1,7 @@
 import styles from "./nacimiento.module.css";
 import child2 from "../assets/child2.png";
 import Estrella3 from "../assets/images/Estrella3";
+import question from "../assets/question.png";
 
 const Nacimiento = () => {
   return (
@@ -10,6 +11,7 @@ const Nacimiento = () => {
           <h2>¿Cómo nació PASSWORED?</h2>
           <div className={styles.starSection}>
         <Estrella3 className={styles.star1} />
+        
       </div>
         <p  >
           Un compañero tenía un hijo con retraso madurativo; una noche fui a
