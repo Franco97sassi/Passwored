@@ -4,7 +4,29 @@ import { Box, Typography, useMediaQuery } from "@mui/material";
 
 const Invertir = () => {
   const matches = useMediaQuery("(max-width:600px)");
-  
+  const teamText = `
+  Jóvenes capacitados y comprometidos full time con esta Startup,
+  con habilidades acorde a la magnitud del proyecto, la resiliencia
+  suficiente para sortear las dificultades y sobre todo con la
+  capacidad de cambiar o modificar el emprendimiento para lograr
+  el éxito en su máxima expresión. Tenemos objetivos claros y
+  definidos en etapas con variedad de alternativas, una misión
+  preponderante afines a nuestros valores y una visión distante
+  pero motivadora.
+`;
+
+const impactText = `
+  Nuestra app educativa está cambiando vidas para un futuro mejor.
+  Ayudamos a los estudiantes a adquirir conocimientos de manera
+  efectiva y a desarrollar habilidades claves para el éxito en
+  el futuro.
+`;
+const readyText = `
+  ¿Listo para ser parte de algo grande? Envianos un mensaje a
+                través br de nuestro formulario de contacto o escríbenos
+                directamente a contac@passwored.com
+`;
+
   return (
     <>
       {!matches ? (
@@ -42,14 +64,7 @@ const Invertir = () => {
                 Equipo
               </Typography>
               <Typography variant="body">
-                Jóvenes capacitados y comprometidos full time con esta Startup,
-                con habilidades acorde a la magnitud del proyecto, la
-                resiliencia suficiente para sortear las dificultades y sobre
-                todo con la capacidad de cambiar o modificar el emprendimiento
-                para lograr el éxito en su máxima expresión. Tenemos objetivos
-                claros y definidos en etapas con variedad de alternativas, una
-                misión preponderante afines a nuestros valores y una visión
-                distante pero motivadora.
+                 {teamText}
               </Typography>
             </Box>
             <Box
@@ -67,10 +82,7 @@ const Invertir = () => {
                 Impacto
               </Typography>
               <Typography variant="body">
-                Nuestra app educativa está cambiando vidas para un futuro mejor.
-                Ayudamos a los estudiantes a adquirir conocimientos de manera
-                efectiva y a desarrollar habilidades claves para el éxito en el
-                futuro.
+              {impactText}
               </Typography>
             </Box>
           </Box>
@@ -88,9 +100,7 @@ const Invertir = () => {
                 sx={{ paddingBottom: "2%" }}
                 fontWeight="500"
               >
-                ¿Listo para ser parte de algo grande? Envianos un mensaje a
-                través br de nuestro formulario de contacto o escríbenos
-                directamente a contac@passwored.com
+                {readyText}
               </Typography>
               <Box sx={{ width: "60%" }}>
                 <CallButton className={styles.buttonProps} text="Contactanos" />
@@ -127,14 +137,7 @@ const Invertir = () => {
                 Equipo
               </Typography>
               <Typography variant="body" sx={{ pr: "5%" }}>
-                Jóvenes capacitados y comprometidos full time con esta Startup,
-                con habilidades acorde a la magnitud del proyecto, la
-                resiliencia suficiente para sortear las dificultades y sobre
-                todo con la capacidad de cambiar o modificar el emprendimiento
-                para lograr el éxito en su máxima expresión. Tenemos objetivos
-                claros y definidos en etapas con variedad de alternativas, una
-                misión preponderante afines a nuestros valores y una visión
-                distante pero motivadora.
+              {teamText}
               </Typography>
             </Box>
 
@@ -154,10 +157,7 @@ const Invertir = () => {
                   Impacto
                 </Typography>
                 <Typography variant="body" sx={{ pr: "5%" }}>
-                  Nuestra app educativa está cambiando vidas para un futuro
-                  mejor. Ayudamos a los estudiantes a adquirir conocimientos de
-                  manera efectiva y a desarrollar habilidades claves para el
-                  éxito en el futuro.
+                {impactText}
                 </Typography>
               </Box> 
             </Box>
@@ -168,9 +168,7 @@ const Invertir = () => {
                 ÚNETE A LA EVOLUCIÓN
               </Typography>
               <Typography variant="body" sx={{ fontWeight: 500, pb: "15%" }}>
-                ¿Listo para ser parte de algo grande? Envianos un mensaje a
-                través br de nuestro formulario de contacto o escríbenos
-                directamente a contac@passtudy-ia.com
+              {readyText}
               </Typography>
               <Box sx={{  width: "100%",pt:"5%" }}>
                 <CallButton className={styles.buttonProps} text="Contactanos" />

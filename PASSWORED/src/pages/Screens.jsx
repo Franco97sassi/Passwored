@@ -165,15 +165,15 @@ const Screens = () => {
         sx={{
           display: "flex",
           flexDirection: "row",
-          justifyContent: "center",
+          justifyContent: "flex-start",
           alignItems: "center",
           height: "25%",
           width: "100%",
           gap: 0,
         }}
       >
-        <Typography variant="h1">{number}</Typography>
-        <Typography variant="h3" sx={{ fontWeight: 500 }}>
+        <Typography variant="h1" sx={{pl:"5%" }}>{number}</Typography>
+        <Typography variant="h3" sx={{pl:"7%", fontWeight: 500 }}>
           {title}
         </Typography>
       </Box>

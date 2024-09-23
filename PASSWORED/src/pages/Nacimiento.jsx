@@ -83,6 +83,7 @@ const Nacimiento = () => {
               textAlign: "left",
               pb: { xs: "5%", md: "none" },
               pl: { xs: "5%", md: "none" },
+              width:{ xs: "75%", md: "100%" }
             }}
           >
             ¿Cómo nació PASSWORED?

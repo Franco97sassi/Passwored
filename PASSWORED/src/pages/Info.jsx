@@ -18,7 +18,9 @@ const Info = () => {
   return (
     <Box
       sx={{
-        height: { xs: "110vh", md: "105vh" },
+        // height: { xs: "110vh", md: "105vh" },
+        height: { xs: "auto", md: "105vh" },
+
         background: {
           xs: "white",  
           md: "linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(238, 232, 251, 1) 60%, rgba(253, 194, 49, 0.58) 100%)", // Gradiente para pantallas medianas o mayores
@@ -42,7 +44,7 @@ const Info = () => {
 
       <Box
         sx={{
-          height: { xs: "45%", md: "42%" },
+          height: { xs: "15%", md: "42%" },
           paddingRight: "7%",
           display: "flex",
           flexDirection: "column",
@@ -71,6 +73,7 @@ const Info = () => {
           display: "flex",
           flexDirection: "row",
           justifyContent: "flex-end",
+          pt:"27%"
         }}
       >
         <Box
@@ -122,7 +125,7 @@ const Info = () => {
           individuales de cada niño.
           <br />
           Está demostrado que ellos utilizan altos grados de razonamiento y
-          comprensión para obtener lo que quieren.{" "}
+          comprensión para obtener lo que quieren.
         </Typography>
       </Box>
 
