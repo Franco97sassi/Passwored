@@ -181,7 +181,7 @@ const Navbar = ({text}) => {
                 </Typography>
               </RouterLink>
               <RouterLink to="/" onClick={handleLogoClick} style={{ textDecoration: 'none' }}>
-                <CallButton className={styles.buttonProps} text="Contáctanos" />
+                <CallButton className={styles.buttonProps} text="Contactanos" />
               </RouterLink>
             </>
           )}
