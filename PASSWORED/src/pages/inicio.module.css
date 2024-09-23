@@ -1,6 +1,6 @@
 .buttonRegister {
   background-color: #ff6a0f;
-  padding: 4%;
+  padding: 2%;
   width: 35%;
   height: auto;
   display: flex;
@@ -16,7 +16,9 @@
 @media (min-width: 1919px) {
   .buttonRegister {
     font-size: 24px;
-    padding: 4%;
+    padding: 2%;
+    width: 30%;
+
   }
 }
 
