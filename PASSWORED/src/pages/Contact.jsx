@@ -65,7 +65,10 @@ const Contact = () => {
         ))}
       </Box>
       <Box>
-        <Footer />
+        <Footer 
+    
+        
+        />
       </Box>
     </Box>
   );

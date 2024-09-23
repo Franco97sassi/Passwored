@@ -2,18 +2,21 @@
 import styles from "./politics.module.css";
  
 import Navbar from '../components/Navbar';
-import FooterPolitics from '../components/FooterPolitics';
+import Footer from '../components/Footer';
 import { Box, Typography, useMediaQuery } from "@mui/material";
 
 const Politics = () => {
+  const matches = useMediaQuery("(max-width:600px)");
+
   const text="#000000"
+  const colors= "#000000"
   return (
     <> 
     <Navbar sx={{ zIndex: 1}} text={text}/>
     <Box sx={{ padding: '6%',
           paddingTop: '15%',
           display: 'flex',
-          
+          paddingBottom:matches?"10%":"0%",
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'flex-start',gap:"10px"}}>
@@ -127,8 +130,11 @@ const Politics = () => {
       </Typography>
  
     </Box>          
-    <FooterPolitics/>
-
+    <Footer 
+  background='linear-gradient(180deg, #ffffff 0%, #9f6ed7 50%, #9f6ed7 100%)' 
+  width="100%"
+   
+/>
       </>
   );
 };

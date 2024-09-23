@@ -18,8 +18,9 @@ const FooterPolitics = () => {
     justifyContent="space-between"
     alignItems="center"
     
-    mb={{ xs: '10vh', md: '0' }}
-    flexDirection={{ xs: 'column-reverse', md: 'row' }}
+     flexDirection={{ xs: 'column-reverse', md: 'row' }}
+         mb={{ xs: '10vh', md: '0' }}
+
     sx={{
       margin: {
         xs: '0 -0%', 

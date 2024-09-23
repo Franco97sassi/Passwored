@@ -159,12 +159,12 @@ const Invertir = () => {
                   manera efectiva y a desarrollar habilidades claves para el
                   éxito en el futuro.
                 </Typography>
-              </Box>{" "}
+              </Box> 
             </Box>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "center", mt: "50%" }}>
             <Box className={styles.boxEvolution}>
-              <Typography variant="h3" sx={{ fontWeight: 600, pb: "5%" }}>
+              <Typography variant="h3" sx={{ fontWeight: 600, pb: "5%",ml:"-2%"}}>
                 ÚNETE A LA EVOLUCIÓN
               </Typography>
               <Typography variant="body" sx={{ fontWeight: 500, pb: "15%" }}>
