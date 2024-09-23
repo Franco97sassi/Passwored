@@ -180,7 +180,10 @@ const Navbar = ({text}) => {
                   Únete a nosotros
                 </Typography>
               </RouterLink>
-              <RouterLink to="/" onClick={handleLogoClick} style={{ textDecoration: 'none' }}>
+              <RouterLink to="/" onClick={handleLogoClick} style={{ textDecoration: 'none' ,
+                  marginLeft: window.innerWidth <= 767 ? '-10%' : '0',  
+                  paddingTop: window.innerWidth <= 767 ? '5%' : '0'   
+              }}>
                 <CallButton className={styles.buttonProps} text="Contactanos" />
               </RouterLink>
             </>

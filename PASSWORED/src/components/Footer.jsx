@@ -41,7 +41,7 @@ const Footer = ({ background, width }) => {
       <Box
         display="flex"
         alignItems="center"
-        pl={{ xs: "7%", md: "-1%" }}
+        pl={{ xs: "22%", md: "-1%" }}
         ml={isHomePage ? "-12%" : "-7%"}        width={{ xs: "75%", md: "20%" }}
         pt={{ xs: "0px", md: "0" }}
       >
@@ -60,7 +60,16 @@ const Footer = ({ background, width }) => {
       </Box>
       <Box>
         <Link to="/politics"  style={{ textDecoration: 'none' }}>
-          <Typography fontSize={{ xs: "20px", md: "24px" }} textAlign="center">
+          <Typography fontSize={{ xs: "20px", md: "24px" }} textAlign="center" sx={{
+            pt:{
+              xs: "5%",
+              md: "0%",
+            }, 
+            pb:{
+              xs: "5%",
+              md: "0%",
+            },
+          }}>
             Políticas de Privacidad
           </Typography>
         </Link>
@@ -71,6 +80,7 @@ const Footer = ({ background, width }) => {
         justifyContent="center"
         alignItems="center"
         gap={{ xs: "5vw", md: "1vw" }}
+       
       >
         <IconButton
           onClick={() =>
