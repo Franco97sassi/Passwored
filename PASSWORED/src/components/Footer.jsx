@@ -41,7 +41,7 @@ const Footer = ({ background, width }) => {
       <Box
         display="flex"
         alignItems="center"
-        pl={{ xs: "22%", md: "-1%" }}
+        pl={{ xs: "37%", md: "-1%" }}
         ml={isHomePage ? "-27%" : "-20%"}        width={{ xs: "75%", md: "20%" }}
         pt={{ xs: "0px", md: "0" }}
       >
