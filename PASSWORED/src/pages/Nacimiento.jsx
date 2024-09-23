@@ -8,7 +8,7 @@ const Nacimiento = () => {
   const Content = ({ children, variant, align }) => (
     <Typography
       variant={variant}
-      sx={{ textAlign: align, paddingLeft: "5%", width: "75%" }}
+      sx={{ textAlign: align, paddingLeft: "5%", width: { xs: "95%", md: "75%" } }}
     >
       {children}
     </Typography>
@@ -82,18 +82,20 @@ const Nacimiento = () => {
               fontWeight: 600,
               textAlign: "left",
               pb: { xs: "5%", md: "none" },
+              pl: { xs: "5%", md: "none" },
             }}
           >
             ¿Cómo nació PASSWORED?
           </Typography>
 
-          <Content variant="body">{bodyText}</Content>
+          <Content variant="body"  >{bodyText}</Content>
         </Box>
         <Box
           sx={{
             width: { xs: "90%", md: "47.3%" },
             height: "auto",
             paddingLeft: { xs: "5%", md: "4.3%" },
+            paddingTop: { xs: "10%", md: "0%" },
           }}
         >
           <img
@@ -133,6 +135,7 @@ const Nacimiento = () => {
               width: "75%",
               fontWeight: 400,
               paddingLeft: "5%",
+             
             }}
           >
             {bodyText}
@@ -149,7 +152,7 @@ const Nacimiento = () => {
           flexDirection: "column",
           textAlign: "left",
           alignItems: "flex-start",
-          width: "62.6%",
+          width:  { xs: "87%", md: "62%" } 
         }}
       >
         <Typography variant="h2" sx={{ fontWeight: 600, textAlign: "left" }}>

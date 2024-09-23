@@ -162,9 +162,9 @@ const Invertir = () => {
               </Box> 
             </Box>
           </Box>
-          <Box sx={{ display: "flex", justifyContent: "center", mt: "50%" }}>
+          <Box sx={{ display: "flex", justifyContent: "center", mt: "0%" }}>
             <Box className={styles.boxEvolution}>
-              <Typography variant="h3" sx={{ fontWeight: 600, pb: "5%",ml:"-2%"}}>
+              <Typography variant="h3" sx={{ fontWeight: 600, pb: "5%",ml:"-0%"}}>
                 ÚNETE A LA EVOLUCIÓN
               </Typography>
               <Typography variant="body" sx={{ fontWeight: 500, pb: "15%" }}>
