@@ -7,6 +7,7 @@ import CallButton from "./CallButton";
 import menu from "../assets/Menu.png";
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { Link } from "react-scroll";
+import Menu from "../assets/images/Menu";
 
 const Navbar = ({text}) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -117,12 +118,8 @@ const Navbar = ({text}) => {
             paddingRight: '3%',
           }}
         >
-          {/* no se pudo cargar la svg porque se distorsionaba */}
-           <img src={menu} alt="Menu"
-            style={{
-              filter: !isHomePage ? 'invert(1)' : (scrollPosition > 0 ? 'invert(1)' : 'none'),
-            }} 
-           />
+           <Menu/>
+            
         </Box>
         <Box  
         sx={{
