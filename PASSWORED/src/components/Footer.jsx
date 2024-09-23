@@ -42,7 +42,7 @@ const Footer = ({ background, width }) => {
         display="flex"
         alignItems="center"
         pl={{ xs: "7%", md: "-1%" }}
-        ml={isHomePage ? "-5%" : "0%"}        width={{ xs: "75%", md: "20%" }}
+        ml={isHomePage ? "-12%" : "-7%"}        width={{ xs: "75%", md: "20%" }}
         pt={{ xs: "0px", md: "0" }}
       >
         {/* No se puede poner la imagen en svg */}

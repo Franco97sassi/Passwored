@@ -26,7 +26,7 @@ const Contact = () => {
   return (
     <Box
       sx={{
-        height: matches?"75vh":"100vh",
+        height: matches?"75vh":"75vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
