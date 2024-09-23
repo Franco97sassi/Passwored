@@ -187,10 +187,12 @@ const Form = () => {
               <StyledTextField
                 sx={{ backgroundColor: "white", borderRadius: "8px" }}
                 name="name"
+                placeholder="Juan"
                 value={formData.name}
                 onChange={handleChange}
                 variant="outlined"
                 fullWidth
+
               />
             </StyledBoxDesktop>
             <StyledBoxDesktop>
@@ -200,6 +202,8 @@ const Form = () => {
               <StyledTextField
                 sx={{ backgroundColor: "white", borderRadius: "8px" }}
                 name="lastName"
+                placeholder="Pérez"
+
                 value={formData.lastName}
                 onChange={handleChange}
                 variant="outlined"
@@ -257,6 +261,8 @@ const Form = () => {
                 value={formData.email}
                 onChange={handleChange}
                 variant="outlined"
+                placeholder="jperez@gmail.com"
+
                 fullWidth
               />
             </StyledBoxDesktop>
@@ -300,6 +306,8 @@ const Form = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 variant="outlined"
+                placeholder="123456789"
+
                 fullWidth
               />
             </StyledBoxDesktop>
@@ -361,6 +369,8 @@ const Form = () => {
                 </Typography>
                 <StyledTextField
                   name="name"
+                  placeholder="Juan"
+
                   value={formData.name}
                   onChange={handleChange}
                   variant="outlined"
@@ -375,7 +385,10 @@ const Form = () => {
 
                 <StyledTextField
                   name="name"
-                  value={formData.name}
+                  placeholder="Pérez"
+
+
+                  value={formData.lastName}
                   onChange={handleChange}
                   variant="outlined"
                   fullWidth
@@ -430,6 +443,8 @@ const Form = () => {
                   onChange={handleChange}
                   variant="outlined"
                   fullWidth
+                  placeholder="123456789"
+
                 />
               </StyledBox>
 
@@ -442,6 +457,8 @@ const Form = () => {
                   value={formData.name}
                   onChange={handleChange}
                   variant="outlined"
+                  placeholder="jperez@gmail.com"
+
                   fullWidth
                 />
               </StyledBox>
@@ -451,7 +468,7 @@ const Form = () => {
                 </Typography>
                 <StyledTextField
                   sx={{
-                    height: "50%",
+                    height: "70%",
                   }}
                   name="name"
                   value={formData.name}
@@ -466,6 +483,8 @@ const Form = () => {
                   width: "125%",
                   height: "7%",
                   paddingLeft: "12%",
+                  paddingTop: "1%",
+
                   paddingBottom: "15%",
                 }}
               >
