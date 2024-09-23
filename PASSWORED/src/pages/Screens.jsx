@@ -262,7 +262,7 @@ const Screens = () => {
             variant="h2"
             sx={{
               textAlign: "left",
-              fontWeight: 500,
+              fontWeight: 600,
               marginTop: "3%",
               marginBottom: "7%",
             }}
@@ -305,10 +305,10 @@ const Screens = () => {
                 paddingLeft: "6%",
                 paddingbottom: "50%",
                 width: "100%",
-                fontWeight: 500,
+                fontWeight: 600,
               }}
             >
-              {" "}
+              
               Tan fácil como...
             </Typography>
             <Box
