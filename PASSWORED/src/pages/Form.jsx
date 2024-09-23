@@ -341,7 +341,7 @@ const Form = () => {
           >
             <Typography
               variant="h3"
-              sx={{ pl: "7%", fontWeight: "600", pt: "2%", pb: "2%" }}
+              sx={{ pl: "7%", fontWeight: "600", pt: "2%", pb: "2%",pr:"2%" }}
             >
               Completá el formulario con tu consulta y te responderemos a la
               brevedad
