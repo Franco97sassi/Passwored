@@ -438,7 +438,7 @@ const Form = () => {
                   Teléfono
                 </Typography>
                 <StyledTextField
-                  name="name"
+                  name="phone"
                   value={formData.name}
                   onChange={handleChange}
                   variant="outlined"
@@ -453,7 +453,7 @@ const Form = () => {
                   Email
                 </Typography>
                 <StyledTextField
-                  name="name"
+                  name="email"
                   value={formData.name}
                   onChange={handleChange}
                   variant="outlined"
@@ -470,7 +470,7 @@ const Form = () => {
                   sx={{
                     height: "70%",
                   }}
-                  name="name"
+                  name="message"
                   value={formData.name}
                   onChange={handleChange}
                   variant="outlined"
