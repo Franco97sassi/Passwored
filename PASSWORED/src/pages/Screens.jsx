@@ -185,15 +185,17 @@ const Screens = () => {
           justifySelf: "start",
           paddingLeft: "6%",
           paddingRight: "6%",
+          paddingBottom: "6%",
+
         }}
       >
         <Typography variant="body">{description}</Typography>
       </Box>
-      <Box sx={{ alignSelf: "center", height: "auto" }}>
+      <Box sx={{   alignSelf: "center", height: "auto" }}>
         {/* <img src={img} alt={title} style={{ marginLeft: "15%", maxWidth: "70%", height: "auto" }} /> */}
         <img
           src={img}
-          style={{ marginLeft: "15%", maxWidth: "70%", height: "auto" }}
+          style={{ marginLeft: "16.5%", maxWidth: "70%", height: "auto" }}
         />
       </Box>
     </Box>
