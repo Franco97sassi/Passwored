@@ -248,7 +248,16 @@ const Screens = () => {
   return (
     <>
       {!matches ? (
-        <Box className={styles.container}>
+        <Box className={styles.container}
+        sx={{
+          paddingLeft: { lg: '7%', xl: '10%' },
+          paddingRight: { lg: '7%', xl: '10%' },
+          paddingBottom: '10%',
+          display: 'flex',
+          flexDirection: 'column',
+        }}
+        
+        >
           <Typography
             variant="h2"
             sx={{
