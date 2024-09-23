@@ -1,48 +1,73 @@
-import styles from "./contact.module.css";
 import Footer from "../components/Footer";
 import Phone from "../assets/images/Phone";
 import MailIcon from "../assets/images/MailIcon";
 import LocationIcon from "../assets/images/LocationIcon";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 
 const Contact = () => {
-  
-  
+  const matches = useMediaQuery("(max-width:600px)");
+  const contactInfo = [
+    {
+      icon: <MailIcon />,
+      label: "Email:",
+      value: "contac@password.com",
+    },
+    {
+      icon: <Phone />,
+      label: "Teléfono:",
+      value: "+54 3874778216",
+    },
+    {
+      icon: <LocationIcon />,
+      label: "Dirección:",
+      value: "Tomas Jofre 179, San Luis - Argentina",
+    },
+  ];
   return (
-    <div className={styles.c2}>  
-   <div className={styles.container}>
-      <div>
-        <h3>Datos de Contacto</h3>
-        <div className={styles.flex}>
-          <MailIcon />
-          <p>Email:  contac@passwored.com</p>
-        </div>
-        <div className={styles.flex2}>
-          <MailIcon />
-          <p>Email:<br/> contac@passwored.com</p>
-        </div>
-        <div className={styles.flex}>
-          <Phone />
-          <p>Telefono: +54 3874778216</p>
-        </div>{" "}
-         
-        <div className={styles.flex2}>
-          <Phone />
-          <p>Telefono:<br/> +54 3874778216</p>
-        </div>{" "}
-        <div className={styles.flex}>
-          <LocationIcon />
-          <p>Dirección :Tomas Jofre 179, San Luis -  Argentina</p>
-        </div>
-        <div className={styles.flex2}>
-          <LocationIcon />
-          <p>Dirección :<br/> Tomas Jofre 179, San Luis -<br/> Argentina</p>
-        </div>
-      </div> 
-      <div>
-        
+    <Box
+      sx={{
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        width: "95%",
+        paddingLeft: "5%",
+        paddingBottom: "3%",
+        paddingTop: "3%",
+        background:
+          "linear-gradient(180deg, #ffffff 0%, #eee8fb 50%, #9f6ed7 100%)",
+      }}
+    >
+      <Box>
+        <Typography
+          fontWeight="600"
+          variant="h2"
+          sx={{ p: 0, textAlign: "left", paddingBottom: "4%" }}
+        >
+          Datos de Contacto
+        </Typography>
+
+        {contactInfo.map(({ icon, label, value }, index) => (
+          <Box
+            key={index}
+            sx={{ display: "flex", paddingBottom: "2%" }}
+            alignItems="center"
+          >
+            {icon}
+            <Typography
+              variant="h4"
+              sx={{ paddingLeft: { xs: "5%", sm: "1%" } }}
+            >
+              {label} {matches && <br />}
+              {value}
+            </Typography>
+          </Box>
+        ))}
+      </Box>
+      <Box>
         <Footer />
-      </div>
-    </div>  </div>
+      </Box>
+    </Box>
   );
 };
 

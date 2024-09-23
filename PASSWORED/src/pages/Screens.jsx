@@ -1,19 +1,39 @@
-import React, { useState }  from "react";
-import styles from "./screens.module.css";
+ import styles from "./screens.module.css";
 import screen1 from "../assets/box1.png";
 import screen2 from "../assets/screen2.png";
 import screen3 from "../assets/screen3.png";
-import screen4 from "../assets/im4-bb.png";
+import screen4 from "../assets/screen4.png";
 import screen5 from "../assets/screen5.png";
 import screen6 from "../assets/screen6.png";
-import { useMediaQuery } from "@mui/material"; // Si estás usando Material UI para el hook
+import { Typography, useMediaQuery } from "@mui/material"; 
+import Box from "@mui/material/Box";
 
- const Screens = () => {
-  const matches = useMediaQuery('(max-width:600px)')
-  // const [currentBox, setCurrentBox] = useState(0);
-
-  // Las cajas que solo se renderizan cuando matches es true
-  const box2Content = [
+const Screens = () => {
+  const matches = useMediaQuery("(max-width:600px)");
+  const steps = [
+    {
+      number: "01",
+      title: "Descargar la App",
+      description:
+        "Por el momento solo estará disponible para sistema Android.",
+      img: screen1,
+    },
+    {
+      number: "02",
+      title: "Configurar la App",
+      description:
+        "Seleccionará a qué Apps puede ingresar el niño realizando una actividad educativa.",
+      img: screen2,
+    },
+    {
+      number: "03",
+      title: "Listo!!!",
+      description:
+        "El celular se verá totalmente normal, pero en el momento que el niño seleccione una App como por ejemplo Free Fire...",
+      img: screen3,
+    },
+  ];
+  const stepsGold = [
     {
       title: "Actividad",
       description:
@@ -33,224 +53,292 @@ import { useMediaQuery } from "@mui/material"; // Si estás usando Material UI p
       img: screen6,
     },
   ];
-  // const handleNext = () => {
-  //   if (currentBox < box2Content.length - 1) {
-  //     setCurrentBox(currentBox + 1);
-  //   }
-  // };
+  const Step = ({ number, title, description, img }) => (
+    <Box
+      sx={{
+        width: "29%",
+        backgroundColor: "#e8dbff",
+        border: "1px solid #ccc",
+        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+        borderRadius: "20px",
+        marginBottom: "4%",
+        paddingBottom: "1%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-start",
+        justifyContent: "flex-start",
+      }}
+    >
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flex-start",
+          alignItems: "flex-start",
+          height: "25%",
+          width: "100%",
+        }}
+      >
+        <Typography variant="h1" sx={{ pl: "5%" }}>
+          {number}
+        </Typography>
+        <Typography variant="h3" sx={{ fontWeight: 500, pl: "5%" }}>
+          {title}
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+           height: "50%",
+          textAlign: "left",
+          paddingLeft: " 6%",
+          paddingRight: "6%",
+        }}
+      >
+        <Typography variant="body">{description}</Typography>
+      </Box>
+      <Box sx={{ alignSelf: "center", height: "auto" }}>
+        {/* <img src={img} alt={title} style={{ marginLeft: "15%", maxWidth: "70%", height: "auto" }} /> */}
+        <img src={img} style={{ width: "100%", height: "auto" }} />
+      </Box>
+    </Box>
+  );
+  const StepGold = ({ number, title, description, img }) => (
+    <Box
+      sx={{
+        width: "27%",
+        backgroundColor: "#ffc978",
+        border: "1px solid #ccc",
+        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+        borderRadius: "20px",
+        padding: "1%",
+        display: "flex",
+        flexDirection: "column",
+        alignitems: "flex-start",
+        justifyContent: "flex-start",
+      }}
+    >
+      <Box sx={{ height: " 12%", paddingLeft: "0%" }}>
+        <Typography
+          variant="h3"
+          sx={{
+            fontWeight: 500,
+            paddingLeft: " 6%",
+            paddingBottom: "1%",
+            paddingTop: "5%",
+          }}
+        >
+          {title}
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+           height: "50%",
+          textAlign: "left",
+          paddingLeft: " 6%",
+          paddingRight: "6%",
+          paddingBottom: "5%",
+        }}
+      >
+        <Typography variant="body">{description}</Typography>
+      </Box>
+      <Box sx={{ alignSelf: "center", height: "auto" }}>
+        {/* <img src={img} alt={title} style={{ marginLeft: "15%", maxWidth: "70%", height: "auto" }} /> */}
+        <img src={img} style={{ width: "100%", height: "auto" }} />
+      </Box>
+    </Box>
+  );
 
-  // const handlePrev = () => {
-  //   if (currentBox > 0) {
-  //     setCurrentBox(currentBox - 1);
-  //   }
-  // };
+  const StepMobile = ({ number, title, description, img }) => (
+    <Box
+      sx={{
+        width: "87%",
+        marginLeft: "5%",
+        marginRight: "5%",
+        marginBottom: "5%",
+        borderRadius: "20px",
+
+        padding: "1%",
+        backgroundColor: "#E8DBFF",
+      }}
+    >
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "25%",
+          width: "100%",
+          gap: 0,
+        }}
+      >
+        <Typography variant="h1">{number}</Typography>
+        <Typography variant="h3" sx={{ fontWeight: 500 }}>
+          {title}
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          textAlign: "left",
+          height: "50%",
+          fontSize: "18px",
+          justifySelf: "start",
+          paddingLeft: "6%",
+          paddingRight: "6%",
+        }}
+      >
+        <Typography variant="body">{description}</Typography>
+      </Box>
+      <Box sx={{ alignSelf: "center", height: "auto" }}>
+        {/* <img src={img} alt={title} style={{ marginLeft: "15%", maxWidth: "70%", height: "auto" }} /> */}
+        <img
+          src={img}
+          style={{ marginLeft: "15%", maxWidth: "70%", height: "auto" }}
+        />
+      </Box>
+    </Box>
+  );
+  const StepGoldMobile = ({ number, title, description, img }) => (
+    <Box
+      sx={{
+        display: "inline-block",
+        width: "87%",
+        height: "auto",
+        backgroundColor: "#ffc978",
+        border: "1px solid #ccc",
+        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+        borderRadius: "20px",
+        padding: "1%",
+        marginLeft: "5%",
+        marginRight: "5%",
+        textAlign: "center",
+        position: "relative",
+        maxWidth: "90%",
+        overflow: "hidden",
+        marginTop: "5%",
+      }}
+    >
+      <Box sx={{ textAlign: "left" }}>
+        <Typography
+          variant="h3"
+          sx={{ fontWeight: 500, pl: "7%", pt: "2%", pb: "2%" }}
+        >
+          {title}
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+           height: "50%",
+          textAlign: "left",
+          paddingLeft: " 6%",
+          paddingRight: "6%",
+          paddingBottom: "5%",
+        }}
+      >
+        <Typography variant="body">{description}</Typography>
+      </Box>
+      <Box sx={{ alignSelf: "center", height: "auto" }}>
+        <img src={img} style={{ maxWidth: "70%", height: "auto" }} />
+      </Box>
+    </Box>
+  );
 
   return (
-    <>  { !matches?(  
-    <div className={styles.container}>
-      <h2 className={styles.title}> Tan fácil como...</h2>
-      <div className={styles.boxes}>
-       
-        <div className={styles.box}>
-          <div className={styles.title2}>
-            <h2>01</h2> 
-            <h3>Descargar la App</h3>
-             </div>
-             <div className={styles.description}>  
-            <p  >Por el momento solo estará disponible para sistema Android.</p>{" "}
-            </div>
-             
-             {" "}
-          <div className={styles.imgContainer}>
-            <img src={screen1}    className={styles.img}/>{" "}
-          </div>
-        </div>
-       
-        <div className={styles.box}>
-          <div className={styles.title2}>
-            <h2>02</h2>   
-            <h3>Configurar la App</h3>{" "}</div>
-            <div  className={styles.description}>  <p >
-              Seleccionará a qué Apps puede ingresar el niño realizando una
-              actividad educativa (casilleros derecha) y qué Apps tendrán una
-              contraseña para que el niño no pueda ingresar (casilleros
-              izquierda).{" "}
-            </p>{" "}
-          {" "} </div>
-          <div  className={styles.imgContainer}>
-            <img src={screen2} className={styles.img} />{" "}
-          </div>
-        </div>
+    <>
+      {!matches ? (
+        <Box className={styles.container}>
+          <Typography
+            variant="h2"
+            sx={{
+              textAlign: "left",
+              fontWeight: 500,
+              marginTop: "3%",
+              marginBottom: "7%",
+            }}
+          >
+            {" "}
+            Tan fácil como...
+          </Typography>
+          <Box
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              alignItems: "space-between",
+            }}
+          >
+            {steps.map((step) => (
+              <Step key={step.number} {...step} />
+            ))}
 
-        <div className={styles.box}>
-          <div className={styles.title2}>
-            <h2>03</h2>   
-            <h3>Listo!!!</h3> </div>
-            <div  className={styles.description}>  <p >
-            El celular se verá totalmente normal, pero en el momento que el
-              niño seleccione una App como por ejemplo Free Fire...{" "}
+            {stepsGold.map((step) => (
+              <StepGold key={step.number} {...step} />
+            ))}
+          </Box>
+        </Box>
+      ) : (
+        <>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              width: "100%",
+              overflowX: "hidden",
+            }}
+          >
+            <Typography
+              variant="h2"
+              sx={{
+                backgroundColor: "#eee8fb",
+                paddingTop: "25%",
+                paddingLeft: "6%",
+                paddingbottom: "50%",
+                width: "100%",
+                fontWeight: 500,
+              }}
+            >
+              {" "}
+              Tan fácil como...
+            </Typography>
+            <Box
+              sx={{
+                paddingTop: "25%",
+                background:
+                  "linear-gradient(180deg, #eee8fb 44.5%, rgba(253, 194, 49, 0.58) 89%)",
+                flex: 1,
+                marginBottom: "0%",
+              }}
+            >
+              {steps.length > 0 && (
+                <StepMobile key={steps[0].number} {...steps[0]} />
+              )}
+            </Box>
 
-            </p>{" "}
-          {" "} </div>
-          <div  className={styles.imgContainer}>
-            <img src={screen3} className={styles.img} />{" "}
-          </div>
-        </div>
-        
-        <div className={styles.box2}>
-          <div className={styles.title3}>
-             <h3> Actividad </h3></div>
-            <div  className={styles.description}>  <p >
-            Aparecerá una actividad de enseñanza y luego cuatro preguntas
-              relacionadas. Si responde bien tres de ellas... Eureka! ingresará
-              a su App favorita por 20 min.
-            </p>{" "}
-          {" "} </div>
-          <div  className={styles.imgContainer}>
-            <img src={screen4} className={styles.img} />{" "}
-          </div>
-        </div>
-        
-        <div className={styles.box2}>
-          <div className={styles.title3}>
-               
-            <h3> Apps Bloqueadas</h3>{" "}</div>
-            <div  className={styles.description}>  <p >
-            Si selecciona una App de las que se bloqueo previamente en
-            configuración como por ejemplo Whatsapp...
-            </p>{" "}
-          {" "} </div>
-          <div  className={styles.imgContainer}>
-            <img src={screen5} className={styles.img} />{" "}
-          </div>
-        </div>
-        <div className={styles.box2}>
-          <div className={styles.title3}>
-             
-            <h3> Password</h3>{" "}</div>
-            <div  className={styles.description}>  <p >
-            Aparecerá un patrón de bloqueo que sólo conocerá el tutor del
-              niño. Manteniendo el acceso controlado del menor.{" "}
+            <Box
+              sx={{
+                flex: "1",
+                position: "relative",
+                backgroundColor: "rgba(253, 194, 49, 0.58)",
+              }}
+            >
+              {steps.length > 0 && (
+                <StepMobile key={steps[1].number} {...steps[1]} />
+              )}
+            </Box>
+          </Box>
 
-            </p>{" "}
-          {" "} </div>
-          <div  className={styles.imgContainer}>
-            <img src={screen6} className={styles.img} />{" "}
-          </div>
-        </div>
-        
-         
-      </div>
-    </div> 
-    ):(
-      <> 
-    <div className={styles.b1} > 
-    <h2 className={styles.title}> Tan fácil como...</h2>
- <div className= {styles.topHalf}  >  
-        <div className={`${styles.box}  `}> 
-          <div className={styles.title2}>
-            <p className={styles.title1}>01</p> 
-            <p className={styles.subtitle2}>Descargar la App</p>
-             </div>
-             <div className={styles.description}>  
-            <p  >Por el momento solo estará disponible para sistema Android.</p>{" "}
-            </div>
-             
-             {" "}
-          <div className={styles.imgContainer}>
-            <img src={screen1}    className={styles.img}/>{" "}
-          </div>
-        </div> </div> 
-        {/* <div className= {styles.middle} >a</div> */}
-         <div className= {styles.bottomHalf} >     <div className={`${styles.box}  `}>  
-          <div className={styles.title2}>
-            <p  className={styles.title1}>02</p>   
-            <p className={styles.subtitle2}>Configurar la App</p>{" "}</div>
-            <div  className={styles.description}>  <p >
-              Seleccionará a qué Apps puede ingresar el niño realizando una
-              actividad educativa (casilleros derecha) y qué Apps tendrán una
-              contraseña para que el niño no pueda ingresar (casilleros
-              izquierda).{" "}
-            </p>{" "}
-          {" "} </div>
-          <div  className={styles.imgContainer}>
-            <img src={screen2} className={styles.img} />{" "}
-          </div>
-        </div></div> </div> 
-        <div className={styles.gradient}>  
+          <div className={styles.gradient}>
+            {steps.length > 0 && (
+              <StepMobile key={steps[2].number} {...steps[2]} />
+            )}
 
-        <div className={styles.box}>
-        <div className={`${styles.title2} ${styles.title123}`}>
-        <p  className={styles.title1}>03</p>   
-            <p className={styles.subtitle2}> Listo!!!</p>{" "}</div>
-            <div  className={styles.description}>  <p >
-            El celular se verá totalmente normal, pero en el momento que el
-              niño seleccione una App como por ejemplo Free Fire...{" "}
-
-            </p>{" "}
-          {" "} </div>
-          <div  className={styles.imgContainer}>
-            <img src={screen3} className={styles.img} />{" "}
+            {stepsGold.map((step) => (
+              <StepGoldMobile key={step.number} {...step} />
+            ))}
           </div>
-        </div>
-      {/* <div className={styles.mobileContainer}> */}
-          <div className={styles.box2}>
-            <div className={styles.title3}>
-              <h3>{box2Content[0].title}</h3>
-            </div>
-            <div className={styles.description}>
-              <p>{box2Content[0].description}</p>
-            </div>
-            <div className={styles.imgContainer}>
-              <img src={box2Content[0].img} className={styles.img} alt={box2Content[0].title} />
-            </div>
-            
-            {/* Flechas de navegación */}
-            {/* <button
-  className={`${styles.arrow} ${styles.arrowLeft}`}
-  onClick={handlePrev}
-  disabled={currentBox === 0}
->
-  <img src={arrow} alt="left arrow" className={`${styles.arrowImage} ${styles.flipped}`}  />
-</button>  
-<button
-  className={`${styles.arrow} ${styles.arrowRight}`}
-  onClick={handleNext}
-  disabled={currentBox === box2Content.length - 1}
->
-<img src={arrow} alt="right arrow"className={styles.arrowImage}  />
-</button>*/}
-          </div>
-          <div className={styles.box2}>
-            <div className={styles.title3}>
-              <h3>{box2Content[1].title}</h3>
-            </div>
-            <div className={styles.description}>
-              <p>{box2Content[1].description}</p>
-            </div>
-            <div className={styles.imgContainer}>
-              <img src={box2Content[1].img} className={styles.img} alt={box2Content[1].title} />
-            </div>
-            
-            
-          </div>
-          <div className={styles.box2}>
-            <div className={styles.title3}>
-              <h3>{box2Content[2].title}</h3>
-            </div>
-            <div className={styles.description}>
-              <p>{box2Content[2].description}</p>
-            </div>
-            <div className={styles.imgContainer}>
-              <img src={box2Content[2].img} className={styles.img} alt={box2Content[2].title} />
-            </div>
-            
-            
-          </div>
-        {/* </div> */}
-        </div>
         </>
-    )}</>
+      )}
+    </>
   );
 };
 

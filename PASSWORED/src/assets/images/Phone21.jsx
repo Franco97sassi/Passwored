@@ -1,13 +1,16 @@
 import React from 'react';
-import styles from "./phone21.module.css";
+import { Box } from '@mui/material';
 
 const Phone21 = () => {
   return (
-    <svg    className={styles.container}
-      width="20" 
-      height="20" 
-      viewBox="0 0 48 48" 
-      fill="none" 
+    <Box
+      component="svg"
+      sx={{
+        width: { xs: 20, md: 28, xl: 35 },  
+        height: { xs: 20, md: 28, xl: 35 },
+      }}
+      viewBox="0 0 48 48"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path 
@@ -17,7 +20,7 @@ const Phone21 = () => {
         strokeLinecap="round" 
         strokeLinejoin="round"
       />
-    </svg>
+    </Box>
   );
 };
 

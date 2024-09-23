@@ -1,10 +1,36 @@
 import React from 'react'
-import styles from "./button.module.css"
-import RegisterUser from '../assets/images/RegisterUser'
+import { Box } from '@mui/material';
 
-const SendButton = () => {
+const SendButton = ({className,text}) => {
   return (
-    <button  className={styles.container2}>Enviar</button >
+     <Box 
+      className={className} 
+      component="button"
+      sx={{
+        backgroundColor: '#8E2DE2',
+        padding: '19px',
+        marginLeft:"-10%",
+        width: {
+          xs: "50%",   
+          sm: "17%",  
+        },        height: 'auto',
+        display: 'flex',
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+        borderRadius: '50px',
+        color: 'white',
+        fontSize: '20px',
+        border: 'none',
+        boxShadow: 'none',
+        fontFamily: "'Inter', sans-serif",
+        fontWeight: 500,
+        '&:hover': {
+          backgroundColor: '#7A1FCE', 
+        }
+      }}
+    >
+      {text}
+    </Box>
   )
 }
 

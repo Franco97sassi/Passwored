@@ -1,10 +1,9 @@
- import styles from "./button.module.css"
-import RegisterUser from '../assets/images/RegisterUser'
+ import RegisterUser from '../assets/images/RegisterUser'
 
-const Button = () => {
+const ButtonRegister = ({className}) => {
   return (
-    <div className={styles.container}> <RegisterUser/> Registrarme</div>
+    <div className={className}> <RegisterUser/> Registrarme</div>
   )
 }
 
-export default Button
+export default ButtonRegister

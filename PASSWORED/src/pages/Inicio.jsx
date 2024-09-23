@@ -1,76 +1,168 @@
+import { Box, Typography, useMediaQuery } from "@mui/material";
+
 import Navbar from "../components/Navbar";
 import Estrella1 from "../assets/images/Estrella1";
 import Estrella2 from "../assets/images/Estrella2";
-import Button from "../components/Button";
+import ButtonRegister from "../components/Button";
 import fondoInicio from "../assets/fondoInicio.png";
 import fondoInicioColor from "../assets/fondoInicioColor.png";
 import Estrella3 from "../assets/images/Estrella3";
 import fondoInicioPhone from "../assets/backImagePhone.png";
 import fondoInicioColorPhone from "../assets/backPhone.png";
 import styles from "./inicio.module.css";
- const Inicio = () => {
-  return (
-    <>  
-     <Navbar className={styles.navbar}/>     
-    <div className={styles.section}>
-       
-      <div className={styles.section1}>
-        <div className={styles.star12}>
-          
-          <Estrella2 className={styles.star122} />
-        </div>
-        <div className={styles.star1}>
-          <Estrella1 className={styles.star11} />
-        </div>
 
-        <div className={styles.desc}>
-          <p className={styles.text1}>
-            App que genera<br/>hábitos de lectura,<br/> comprensión de textos<br/> y mucho
-            más.
-          </p>
-          <p className={styles.text1Mobile}>
-            App que<br/> genera hábitos<br/> de lectura,<br/> comprensión<br/> de textos<br/> y mucho
-            más.
-          </p>
-        </div>
-        <div className={styles.star2}>
-          {" "}
-          <Estrella2 className={styles.star22} />
-        </div>
-        <div className={styles.star21}>
-          <Estrella3 className={styles.star22} />
-        </div>
-        <div className={styles.star3}>
-          <Button />
-        </div>
-      </div>
-      <div className={styles.section2}>
-        <img
-          src={fondoInicio}
-          alt="fondo inicio"
-          //  className={styles.overlayImage1}
-          className={styles.backgroundImage}
-        />
-        <img
-          src={fondoInicioColor}
-          alt="fondo inicio"
-          className={styles.backImage}
-        />
-      </div>
-      <div className={styles.section21}>
-        <img
-          src={fondoInicioPhone}
-          alt="fondo inicio"
-          //  className={styles.overlayImage1}
-          className={styles.backgroundImagePhone}
-        />
-        <img
-          src={fondoInicioColorPhone}
-          alt="fondo inicio"
-          className={styles.backImagePhone}
-        />
-      </div>
-    </div></>
+const Inicio = () => {
+  const text="#fff"
+
+  const isMobile = useMediaQuery("(max-width:600px)");
+  const mainText = isMobile ? (
+    <>
+      App que
+      <br />
+      genera hábitos de lectura,
+      <br />
+      comprensión
+      <br />
+      de textos
+      <br />y mucho más.
+    </>
+  ) : (
+    <>
+      App que genera
+      <br />
+      hábitos de lectura,
+      <br />
+      comprensión de textos
+      <br />y mucho más.
+    </>
+  );
+ 
+  return (
+    <>
+      <Navbar sx={{ zIndex: 1 }}  text={text} />
+      <Box
+        sx={{
+          overflowX: "hidden",
+          display: "flex",
+          justifyContent: "space-between",
+          position: "relative",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            width: { xs: "34%", sm: "40%" },
+            boxSizing: "border-box",
+          }}
+        >
+          {isMobile && (
+            <Box
+              sx={{
+                alignSelf: "flex-end",
+                pr: "10%",
+                mr: "-20%",
+                pt: "80%",
+                width: "15%",
+              }}
+            >
+              <Estrella2 style={{ width: "100%" }} />
+            </Box>
+          )}
+
+          <Box
+            sx={{
+              alignSelf: "flex-start",
+              pl: { xs: "11%", sm: "4%" },
+              width: { xs: "15%", sm: "9%" },
+              xs: {
+                mt: "50%",
+                ml: "10%",
+                width: "15%",
+              },
+            }}
+          >
+            <Estrella1 style={{ width: "100%", height: "auto" }} />
+          </Box>
+
+          <Box sx={{ pl: "17.5%", width: isMobile ? "150%" : "131.7%" }}>
+            <Typography variant="h2" fontWeight="400">
+              {mainText}
+            </Typography>
+          </Box>
+
+          {!isMobile && (
+            <Box sx={{ alignSelf: "flex-end", width: "9%", pl: "50%" }}>
+              <Estrella2 style={{ width: "100%" }} />
+            </Box>
+          )}
+          <Box
+            sx={{
+              display: { xs: "flex", sm: "none" },
+              position: "absolute",
+              right: 0,
+              pr: "10%",
+              top: "60%",
+              width: { xs: "10%", sm: "20%" },
+              mt: "10%",
+            }}
+          >
+            <Estrella3
+              sx={{
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </Box>
+          <Box
+            sx={{
+              paddingBottom: { xs: "35%", sm: "0%" },
+              paddingTop: { xs: "15%", sm: "0%" },
+              pl: "13.5%",
+              width: isMobile ? "250%" : "100%",
+            }}
+          >
+            <ButtonRegister className={styles.buttonRegister} />
+          </Box>
+        </Box>
+
+        <Box
+          sx={{
+            width: isMobile ? "62%" : "60%",
+            position: "relative",
+          }}
+        >
+          <Box
+            component="img"
+            src={isMobile ? fondoInicioPhone : fondoInicio}
+            alt="fondo inicio"
+            sx={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              zIndex: 2,
+              width: "100%",
+            }}
+          />
+          <Box
+            component="img"
+            src={isMobile ? fondoInicioColorPhone : fondoInicioColor}
+            alt="fondo inicio color"
+            sx={{
+              position: isMobile ? "absolute":"relative",
+              zIndex: 1,
+              top: 0,
+              left: isMobile ? "0":"3%",
+              width: "100%",
+            }}
+          />
+        </Box>
+      </Box>
+      <Box>
+        
+      </Box>
+    </>
   );
 };
 
