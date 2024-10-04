@@ -11,23 +11,8 @@ import { Box, styled } from "@mui/material";
 
 const Form = () => {
   const matches = useMediaQuery("(max-width:600px)");
-  const CustomMenuItem = styled(MenuItem)(({ theme }) => ({
-    borderRadius: "0px",
-    fontSize: "14px",
-    "&.Mui-selected": {
-      backgroundColor: "#8e2de2",
-      color: "#fff",
-      "&:hover": {
-        backgroundColor: "#8e2de2",
-        color: "#fff",
-      },
-    },
-
-    "&:hover": {
-      backgroundColor: "#8e2de2",
-      color: "#fff",
-    },
-  }));
+   
+  //Estilos
   const StyledTextField = styled(TextField)(({ theme }) => ({
     backgroundColor: "white",
     borderRadius: "8px",
@@ -47,20 +32,37 @@ const Form = () => {
     },
   }));
 
-  const StyledBoxDesktop = styled(Box)(({ theme }) => ({
-    width: "37%",
-    height: "15.2%",
-  }));
+  // const StyledBoxDesktop = styled(Box)(({ theme }) => ({
+  //   width: "37%",
+  //   height: "15.2%",
+  // }));
 
   const StyledBox = styled(Box)(({ theme }) => ({
-    width: "90%",
-    height: "17%",
+    width:   matches ? "90%" : "37%",
+    height: matches ? "17%" : "15.2%%",  
     borderRadius: "20px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "flex-start",
     pb: "2%",
+  }));
+  const CustomMenuItem = styled(MenuItem)(({ theme }) => ({
+    borderRadius: "0px",
+    fontSize: "14px",
+    "&.Mui-selected": {
+      backgroundColor: "#8e2de2",
+      color: "#fff",
+      "&:hover": {
+        backgroundColor: "#8e2de2",
+        color: "#fff",
+      },
+    },
+
+    "&:hover": {
+      backgroundColor: "#8e2de2",
+      color: "#fff",
+    },
   }));
   const StyledSelect = styled(Select)(({ theme }) => ({
     // marginTop: "3%",
@@ -95,6 +97,26 @@ const Form = () => {
       fontWeight: 400,
     },
   }));
+   
+  //Apertura
+
+  const [isSelectOpen, setIsSelectOpen] = useState(false);
+  const handleSelectFocus = () => {
+    setIsSelectOpen(true);
+  };
+
+  const handleSelectBlur = () => {
+    setIsSelectOpen(false);
+  };
+
+  //Formulario
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+ 
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
@@ -103,22 +125,6 @@ const Form = () => {
     message: "",
     category: "default",
   });
-
-  const [isSelectOpen, setIsSelectOpen] = useState(false);
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-  const handleSelectFocus = () => {
-    setIsSelectOpen(true);
-  };
-
-  const handleSelectBlur = () => {
-    setIsSelectOpen(false);
-  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -180,7 +186,7 @@ const Form = () => {
               transition: "height 0.3s ease",
             }}
           >
-            <StyledBoxDesktop>
+            <StyledBox>
               <Typography variant="body2" sx={{ pb: "2%" }}>
                 Nombre
               </Typography>
@@ -194,8 +200,8 @@ const Form = () => {
                 fullWidth
 
               />
-            </StyledBoxDesktop>
-            <StyledBoxDesktop>
+            </StyledBox>
+            <StyledBox>
               <Typography variant="body2" sx={{ pb: "2%" }}>
                 Apellido
               </Typography>
@@ -209,8 +215,8 @@ const Form = () => {
                 variant="outlined"
                 fullWidth
               />
-            </StyledBoxDesktop>
-            <StyledBoxDesktop>
+            </StyledBox>
+            <StyledBox>
               <Typography variant="body2" sx={{ mb: "-2%" }}>
                 Dropdown Title
               </Typography>
@@ -249,8 +255,8 @@ const Form = () => {
                   Quiero formar parte de un proyecto
                 </CustomMenuItem>
               </StyledSelect>
-            </StyledBoxDesktop>
-            <StyledBoxDesktop>
+            </StyledBox>
+            <StyledBox>
               <Typography variant="body2" sx={{ pb: "1%" }}>
                 Email
               </Typography>
@@ -265,8 +271,8 @@ const Form = () => {
 
                 fullWidth
               />
-            </StyledBoxDesktop>
-            <StyledBoxDesktop
+            </StyledBox>
+            <StyledBox
               sx={{
                 position: "relative",
                 transition: "transform 0.3s ease",
@@ -289,8 +295,8 @@ const Form = () => {
                   backgroundColor: "#ffffff",
                 }}
               />
-            </StyledBoxDesktop>
-            <StyledBoxDesktop
+            </StyledBox>
+            <StyledBox
               sx={{
                 position: "relative",
                 transition: "transform 0.3s ease",
@@ -310,7 +316,7 @@ const Form = () => {
 
                 fullWidth
               />
-            </StyledBoxDesktop>
+            </StyledBox>
             <Box
               sx={{
                 width: "75%",

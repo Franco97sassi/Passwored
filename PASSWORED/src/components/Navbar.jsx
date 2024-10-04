@@ -13,7 +13,7 @@ const Navbar = ({text}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const theme = useTheme();
-  const navigate = useNavigate(); // Hook para la navegación
+  const navigate = useNavigate(); 
 
   const isXs = useMediaQuery(theme.breakpoints.down("xs"));
   const isXl = useMediaQuery(theme.breakpoints.up("xl"));
@@ -44,7 +44,7 @@ const Navbar = ({text}) => {
   padding: "1rem",
   fontFamily: "Inter, sans-serif",
   fontWeight: 500,
-  textDecoration: "none", // Eliminar subrayado
+  textDecoration: "none", 
 };
   return (
     <Box
@@ -162,7 +162,7 @@ const Navbar = ({text}) => {
               marginLeft: window.innerWidth <= 767 ? '-10%' : '0',  
               paddingTop: window.innerWidth <= 767 ? '5%' : '0',  
             }}>
-                <CallButton className={styles.buttonProps} text="Contáctanos" />
+                <CallButton className={styles.buttonProps}   />
               </Link>
             </>
           ) : (

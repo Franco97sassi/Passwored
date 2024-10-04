@@ -26,7 +26,7 @@ const Contact = () => {
   return (
     <Box
       sx={{
-        height: matches?"75vh":"75vh",
+        height: matches ? "75vh" : "75vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -65,10 +65,7 @@ const Contact = () => {
         ))}
       </Box>
       <Box>
-        <Footer 
-    
-        
-        />
+        <Footer />
       </Box>
     </Box>
   );

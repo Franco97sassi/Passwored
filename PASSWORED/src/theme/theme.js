@@ -38,9 +38,9 @@ const theme = createTheme({
     h4: {
       fontFamily: '"Montserrat", sans-serif',
 
-      fontWeight: 500, // Peso de la fuente para h4
-      fontSize: "16px", // Tamaño base para móviles
-      // Tamaño de fuente para pantallas medianas y grandes
+      fontWeight: 500,  
+      fontSize: "16px",  
+      
       [createTheme().breakpoints.up("lg")]: {
         fontSize: "24px",
       },
@@ -52,10 +52,10 @@ const theme = createTheme({
     body: {
       fontFamily: '"Inter", sans-serif',
 
-      fontWeight: 400, // Peso de la fuente para h4
-      fontSize: "16px", // Tamaño base para móviles
+      fontWeight: 400, 
+      fontSize: "16px",  
 
-      // Tamaño de fuente para pantallas medianas y grandes
+      
       [createTheme().breakpoints.up("lg")]: {
         fontSize: "19.3px",
       },
@@ -66,10 +66,10 @@ const theme = createTheme({
     body2: {
       fontFamily: '"Inter", sans-serif',
 
-      fontWeight: 700, // Peso de la fuente para h4
-      fontSize: "14px", // Tamaño base para móviles
+      fontWeight: 700,  
+      fontSize: "14px",  
 
-      // Tamaño de fuente para pantallas medianas y grandes
+       
       [createTheme().breakpoints.up("lg")]: {
         fontSize: "19px",
       },
@@ -80,9 +80,9 @@ const theme = createTheme({
     li: {
       fontFamily: '"Montserrat", sans-serif',
 
-      fontWeight: 500, // Peso de la fuente para h4
-      fontSize: "12px", // Tamaño base para móviles
-      // Tamaño de fuente para pantallas medianas y grandes
+      fontWeight: 500,  
+      fontSize: "12px",  
+       
       [createTheme().breakpoints.up("lg")]: {
         fontSize: "14px",
       },
@@ -93,8 +93,8 @@ const theme = createTheme({
     button: {
       fontFamily: "Inter, sans-serif",
 
-      fontSize: "16px", // Tamaño base para móviles
-      // Tamaño de fuente para pantallas medianas y grandes
+      fontSize: "16px",  
+      
       [createTheme().breakpoints.up("lg")]: {
         fontSize: "20px",
       },

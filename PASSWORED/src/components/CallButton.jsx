@@ -4,7 +4,7 @@ import React from 'react'
 // eslint-disable-next-line react/prop-types
 const CallButton = ({className,text}) => {
   return (
-    <div className={className}> <Phone2/>{text}</div>
+    <div className={className}> <Phone2/>Contáctanos</div>
   )
 }
 
