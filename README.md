@@ -1,7 +1,7 @@
 # Passwored
 
  <a href="https://www.rifaselvenado.com//">
- <img src="https://imgur.com/SVrjwVB" alt="Fondo" width="100%" />
+ <img src="https://imgur.com/a/lQBw7rZ" alt="Fondo" width="100%" />
 </a>
 
 ## Description
