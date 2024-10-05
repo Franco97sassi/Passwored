@@ -14,6 +14,7 @@ const Navbar = ({text}) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const theme = useTheme();
   const navigate = useNavigate(); 
+  const isIphone = useMediaQuery('(max-width: 767px) and (-webkit-min-device-pixel-ratio: 2)');
 
   const isXs = useMediaQuery(theme.breakpoints.down("xs"));
   const isXl = useMediaQuery(theme.breakpoints.up("xl"));
@@ -72,15 +73,14 @@ const Navbar = ({text}) => {
         <Box
           sx={{
              width: "100%",
-
-            display: "flex",
+             display: "flex",
             alignItems: "center",
             marginTop: {
               xs: "-10%",
               sm: "-2%",
             },
-            marginLeft: {
-              xs: "-30%",
+            marginLeft:  {
+              xs: "-32%",
               sm: "-5%",
             },
             transform: {

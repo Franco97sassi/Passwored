@@ -66,9 +66,8 @@ const Rocket = () => {
         <Box
           sx={{
             ...commonBoxStyles,
-                        height: "55vh",
-             
-            paddingLeft: "7%",
+                      height: "27vh",
+             paddingLeft: "7%",
             alignItems: "flex-end",
           }}
         >
@@ -78,8 +77,7 @@ const Rocket = () => {
               position: "absolute",
               alignSelf: "flex-end",
               justifySelf: "flex-end",
-              bottom: "15%",
-            }}
+             }}
           >
             <Estrella1 sx={{ width: "100%", height: "auto" }} />
           </Box>
@@ -101,9 +99,13 @@ const Rocket = () => {
             />
           </Box>
         </Box>
+
+
+ 
       )}
     </>
   );
 };
 
 export default Rocket;
+ 

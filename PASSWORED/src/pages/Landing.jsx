@@ -27,7 +27,7 @@ const Landing = () => {
       <Rocket />
 
       <div id="contacto">
-        <Contact />
+       <Contact /> 
       </div>
     </div>
   );

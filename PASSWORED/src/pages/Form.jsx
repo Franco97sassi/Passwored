@@ -46,6 +46,7 @@ const Form = () => {
     justifyContent: "center",
     alignItems: "flex-start",
     pb: "2%",
+    marginTop: matches ? "5%":"0%"
   }));
   const CustomMenuItem = styled(MenuItem)(({ theme }) => ({
     borderRadius: "0px",
@@ -300,7 +301,7 @@ const Form = () => {
               sx={{
                 position: "relative",
                 transition: "transform 0.3s ease",
-                transform: isSelectOpen ? "translateY(10%)" : "translateY(0%)",
+                transform: isSelectOpen ? "translateY(50%)" : "translateY(0%)",
               }}
             >
               <Typography sx={{ pb: "2%" }} variant="body2">
@@ -338,7 +339,7 @@ const Form = () => {
               padding: 0,
               textAlign: "left",
               width: "100%",
-              height: "100vh",
+              height: "max-content",
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-around",
@@ -366,7 +367,7 @@ const Form = () => {
                 alignItems: "center",
                 boxSizing: "border-box",
                 paddingTop: "0%",
-                paddingBottom: "50%",
+                paddingBottom:matches?"0%": "50%",
               }}
             >
               <StyledBox>
