@@ -33,8 +33,8 @@ const Footer = ({ background, width }) => {
 
         },
  
-        height:isHomePage?"10vh":"max-content",
-        background: background,
+        height: isHomePage ? "10vh" : { xs: "max-content", md: "20vh" },
+                background: background,
        
       }}
     >

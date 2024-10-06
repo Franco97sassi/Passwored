@@ -19,6 +19,9 @@ const Politics = () => {
           paddingBottom:matches?"10%":"0%",
           flexDirection: 'column',
           justifyContent: 'center',
+          paddingLeft:matches?"10%":"0%",
+          paddingRight:matches?"10%":"0%",
+
           alignItems: 'flex-start',gap:"10px"}}>
       
       <Typography variant="h2">Política de Privacidad de PASSWORED</Typography>
@@ -116,7 +119,7 @@ const Politics = () => {
 
       <Typography  variant="h3">7. Derechos de los Usuarios</Typography>
       <Typography variant="body">
-        Los usuarios pueden acceder, corregir o eliminar sus datos visitando nuestra página web:  passwored.com/politicas_de_privacidad .
+        Los usuarios pueden acceder,<br/> corregir o eliminar sus datos,<br/>  visitando nuestra página web:<br/> passwored.com/<br/> politicas_de_privacidad 
       </Typography>
 
       <Typography  variant="h3">8. Notificación de Cambios</Typography>
