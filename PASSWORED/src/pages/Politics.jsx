@@ -12,15 +12,15 @@ const Politics = () => {
   const colors= "#000000"
   return (
     <> 
-    <Navbar sx={{ zIndex: 1}} text={text}/>
-    <Box sx={{ padding: '6%',
+    <Navbar   sx={{ zIndex: 1}} text={text}/>
+    <Box id="top" sx={{ padding: '6%',
           paddingTop: matches?"12%":'15%',
           display: 'flex',
           paddingBottom:matches?"10%":"0%",
           flexDirection: 'column',
           justifyContent: 'center',
-          paddingLeft:matches?"10%":"0%",
-          paddingRight:matches?"10%":"0%",
+          paddingLeft:matches?"10%":"10%",
+          paddingRight:matches?"10%":"10%",
 
           alignItems: 'flex-start',gap:"10px"}}>
       

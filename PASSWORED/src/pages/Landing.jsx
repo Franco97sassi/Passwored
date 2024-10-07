@@ -1,4 +1,4 @@
- import Inicio from "./Inicio";
+import Inicio from "./Inicio";
 import Info from "./Info";
 import Screens from "./Screens";
 import Nacimiento from "./Nacimiento";
@@ -6,8 +6,7 @@ import Unete from "./Unete";
 import Invertir from "./Invertir";
 import Form from "./Form";
 import Contact from "./Contact";
- import Rocket from "./Rocket";
- 
+import Rocket from "./Rocket";
 
 const Landing = () => {
   return (
@@ -27,7 +26,7 @@ const Landing = () => {
       <Rocket />
 
       <div id="contacto">
-       <Contact /> 
+        <Contact />
       </div>
     </div>
   );

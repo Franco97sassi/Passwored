@@ -59,7 +59,7 @@ const Footer = ({ background, width }) => {
         />
       </Box>
       <Box>
-        <Link to="/politics"  style={{ textDecoration: 'none' }}>
+        {/* <Link to="/politics"  style={{ textDecoration: 'none' }}>
           <Typography fontSize={{ xs: "20px", md: "24px" }} textAlign="center" sx={{
             pt:{
               xs: "5%",
@@ -72,7 +72,20 @@ const Footer = ({ background, width }) => {
           }}>
             Políticas de Privacidad
           </Typography>
-        </Link>
+        </Link> */}
+        <a href="/politics#top"style={{ textDecoration: 'none' }}> <Typography  fontSize={{ xs: "20px", md: "24px" }} textAlign="center" sx={{
+            pt:{
+              xs: "5%",
+              md: "0%",
+            }, 
+            pb:{
+              xs: "5%",
+              md: "0%",
+            },
+          }}>
+            Políticas de Privacidad
+          </Typography></a>
+
       </Box>
 
       <Box

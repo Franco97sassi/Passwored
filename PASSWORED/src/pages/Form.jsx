@@ -111,13 +111,12 @@ const Form = () => {
   };
 
   //Formulario
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
- 
+  // const handleChange = (e) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
   const [formData, setFormData] = useState({
     name: "",
     lastName: "",
@@ -126,6 +125,15 @@ const Form = () => {
     message: "",
     category: "default",
   });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormData({
+      ...formData,
+      [ name]: value,
+    });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -139,6 +147,15 @@ const Form = () => {
 
       if (response.ok) {
         alert("Correo enviado con éxito");
+        // Reset form after successful submission
+        setFormData({
+          name: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+          category: "default",
+        });
       } else {
         alert("Hubo un problema al enviar el correo");
       }
@@ -146,21 +163,21 @@ const Form = () => {
       console.error("Error al enviar el correo:", error);
     }
   };
-
   return (
     <>
       {!matches ? (
         <Box
           sx={{
             paddingBottom: 0,
-            height: isSelectOpen ? "125vh" : "118vh",
+            // height: isSelectOpen ? "125vh" : "118vh",
+            height:   "118vh",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-around",
             alignItems: "center",
             transition: "height 0.3s ease",
             width: "100%",
-            transform: isSelectOpen ? "translateY(10%)" : "translateY(0%)",
+            // transform: isSelectOpen ? "translateY(10%)" : "translateY(0%)",
           }}
         >
           <Typography
@@ -175,7 +192,8 @@ const Form = () => {
             sx={{
               background: "linear-gradient(180deg, #9f6ed7 0%, #fee9b5 100%)",
               width: "89%",
-              height: isSelectOpen ? "95%" : "70%",
+              // height: isSelectOpen ? "95%" : "70%",
+              height:  "70%",
               borderRadius: "20px",
               display: "flex",
               flexWrap: "wrap",
@@ -192,13 +210,13 @@ const Form = () => {
                 Nombre
               </Typography>
               <StyledTextField
-                sx={{ backgroundColor: "white", borderRadius: "8px" }}
-                name="name"
-                placeholder="Juan"
-                value={formData.name}
-                onChange={handleChange}
-                variant="outlined"
-                fullWidth
+                // sx={{ backgroundColor: "white", borderRadius: "8px" }}
+                 name="name"
+                 placeholder="Juan"
+                //  value={formData.name}
+                //  onChange={handleChange}
+                 variant="outlined"
+                  fullWidth
 
               />
             </StyledBox>
@@ -211,12 +229,13 @@ const Form = () => {
                 name="lastName"
                 placeholder="Pérez"
 
-                value={formData.lastName}
-                onChange={handleChange}
+                // value={formData.lastName}
+                // onChange={handleChange}
                 variant="outlined"
                 fullWidth
               />
             </StyledBox>
+            
             <StyledBox>
               <Typography variant="body2" sx={{ mb: "-2%" }}>
                 Dropdown Title
@@ -265,8 +284,8 @@ const Form = () => {
                 sx={{ backgroundColor: "white", borderRadius: "8px" }}
                 name="email"
                 type="email"
-                value={formData.email}
-                onChange={handleChange}
+                // value={formData.email}
+                // onChange={handleChange}
                 variant="outlined"
                 placeholder="jperez@gmail.com"
 
@@ -275,9 +294,13 @@ const Form = () => {
             </StyledBox>
             <StyledBox
               sx={{
+                // backgroundColor:"red",
                 position: "relative",
                 transition: "transform 0.3s ease",
-                transform: isSelectOpen ? "translateY(15%)" : "translateY(0%)",
+                transform: isSelectOpen ? "translateY(25%)" : "translateY(0%)",
+                 height:"25.2%",
+                //  pt:isSelectOpen ? "1%":"2%"
+                mt:"-1%"
               }}
             >
               <Typography sx={{ pb: "2%" }} variant="body2">
@@ -285,23 +308,27 @@ const Form = () => {
               </Typography>
               <StyledTextField
                 name="message"
-                value={formData.message}
-                onChange={handleChange}
+                // value={formData.message}
+                // onChange={handleChange}
                 variant="outlined"
                 fullWidth
                 sx={{
+height:"100px",
                   width: "100%",
-                  height: "100%",
+                   
                   borderRadius: "8px",
                   backgroundColor: "#ffffff",
+                  
+
                 }}
               />
             </StyledBox>
             <StyledBox
               sx={{
+                mt:"-3%",
                 position: "relative",
                 transition: "transform 0.3s ease",
-                transform: isSelectOpen ? "translateY(50%)" : "translateY(0%)",
+                transform: isSelectOpen ? "translateY(40%)" : "translateY(0%)",
               }}
             >
               <Typography sx={{ pb: "2%" }} variant="body2">
@@ -310,8 +337,8 @@ const Form = () => {
               <StyledTextField
                 sx={{ backgroundColor: "white", borderRadius: "8px" }}
                 name="phone"
-                value={formData.phone}
-                onChange={handleChange}
+                // value={formData.phone}
+                // onChange={handleChange}
                 variant="outlined"
                 placeholder="123456789"
 
@@ -323,7 +350,7 @@ const Form = () => {
                 width: "75%",
                 height: "12.2%",
                 marginLeft: "7%",
-                transform: isSelectOpen ? "translateY(20%)" : "none",
+                transform: isSelectOpen ? "translateY(25%)" : "none",
                 transition: "transform 0.3s ease",
               }}
             >
@@ -378,8 +405,8 @@ const Form = () => {
                   name="name"
                   placeholder="Juan"
 
-                  value={formData.name}
-                  onChange={handleChange}
+                  // value={formData.name}
+                  // onChange={handleChange}
                   variant="outlined"
                   fullWidth
                 />
@@ -395,8 +422,8 @@ const Form = () => {
                   placeholder="Pérez"
 
 
-                  value={formData.lastName}
-                  onChange={handleChange}
+                  // value={formData.lastName}
+                  // onChange={handleChange}
                   variant="outlined"
                   fullWidth
                 />
@@ -446,8 +473,8 @@ const Form = () => {
                 </Typography>
                 <StyledTextField
                   name="phone"
-                  value={formData.name}
-                  onChange={handleChange}
+                  // value={formData.name}
+                  // onChange={handleChange}
                   variant="outlined"
                   fullWidth
                   placeholder="123456789"
@@ -461,8 +488,8 @@ const Form = () => {
                 </Typography>
                 <StyledTextField
                   name="email"
-                  value={formData.name}
-                  onChange={handleChange}
+                  // value={formData.name}
+                  // onChange={handleChange}
                   variant="outlined"
                   placeholder="jperez@gmail.com"
 
@@ -475,11 +502,12 @@ const Form = () => {
                 </Typography>
                 <StyledTextField
                   sx={{
-                    height: "70%",
+                    height: "100px",
+
                   }}
                   name="message"
-                  value={formData.name}
-                  onChange={handleChange}
+                  // value={formData.name}
+                  // onChange={handleChange}
                   variant="outlined"
                   fullWidth
                 />
@@ -490,7 +518,7 @@ const Form = () => {
                   width: "125%",
                   height: "7%",
                   paddingLeft: "12%",
-                  paddingTop: "10%",
+                  paddingTop: "15%",
 
                   paddingBottom: "15%",
                 }}
