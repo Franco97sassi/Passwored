@@ -14,7 +14,7 @@ const Politics = () => {
   return (
     <> 
     <Navbar   sx={{ zIndex: 1}} text={text}/>
-    <div id="top" > 
+    
     <Box  sx={{ padding: '6%',
           paddingTop: isMobile?"12%":'15%',
           display: 'flex',
@@ -134,7 +134,7 @@ const Politics = () => {
         Si tienes preguntas o preocupaciones sobre nuestra política de privacidad, puedes contactarnos a través de  contac@passwored.com .
       </Typography>
  
-    </Box>        </div>   
+    </Box>         
     <Footer 
   background='linear-gradient(180deg, #ffffff 0%, #9f6ed7 50%, #9f6ed7 100%)' 
   width="100%"

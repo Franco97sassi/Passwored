@@ -279,13 +279,13 @@ const Screens = () => {
               alignItems: "space-between",
             }}
           >
-            {steps.map((step) => (
-              <Step key={step.number} {...step} />
-            ))}
+            {steps.map((step,index) => (
+  <Step key={`${step.number}-${index}`} {...step} />
+))}
 
-            {stepsGold.map((step) => (
-              <StepGold key={step.number} {...step} />
-            ))}
+            {stepsGold.map((step,index) => (
+  <StepGold key={`${step.title}-${index}`} {...step} />
+))}
           </Box>
         </Box>
       ) : (
