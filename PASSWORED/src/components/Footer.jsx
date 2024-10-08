@@ -66,7 +66,7 @@ const Footer = ({ background    }) => {
         />
       </Box>
       <Box>
-        {/* <Link to="/politics"  style={{ textDecoration: 'none' }}>
+        <Link to="/politics"  style={{ textDecoration: 'none' }}>
           <Typography fontSize={{ xs: "20px", md: "24px" }} textAlign="center" sx={{
             pt:{
               xs: "5%",
@@ -79,8 +79,8 @@ const Footer = ({ background    }) => {
           }}>
             Políticas de Privacidad
           </Typography>
-        </Link> */}
-        <a href="/politics#top"style={{ textDecoration: 'none' }}> <Typography  fontSize={{ xs: "20px", md: "24px" }} textAlign="center" sx={{
+        </Link>
+        {/* <a href="/politics#top"style={{ textDecoration: 'none' }}> <Typography  fontSize={{ xs: "20px", md: "24px" }} textAlign="center" sx={{
             pt:{
               xs: "5%",
               md: "0%",
@@ -91,7 +91,7 @@ const Footer = ({ background    }) => {
             },
           }}>
             Políticas de Privacidad
-          </Typography></a>
+          </Typography></a> */}
 
       </Box>
 
