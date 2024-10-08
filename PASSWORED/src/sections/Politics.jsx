@@ -14,7 +14,7 @@ const Politics = () => {
   return (
     <> 
     <Navbar   sx={{ zIndex: 1}} text={text}/>
-    <Box id="top" sx={{ padding: '6%',
+    <Box  sx={{ padding: '6%',
           paddingTop: isMobile?"12%":'15%',
           display: 'flex',
           paddingBottom:isMobile?"10%":"0%",
