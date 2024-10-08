@@ -286,7 +286,7 @@ const Form = () => {
               <Typography variant="body2" sx={{ mb: "-2%" }}>
                 Dropdown Title
               </Typography>
-              <StyledSelect
+              {/* <StyledSelect
                 sx={{ mt: "3%" }}
                 // onOpen={handleSelectFocus}
                 // onBlur={handleSelectBlur}
@@ -297,6 +297,44 @@ const Form = () => {
                   name="category"
                 // value={formData.category}
                 // onChange={handleChange}
+                {...register("category")}
+                value={watch("category")} 
+                label="Categoria"
+                MenuProps={{
+                  PaperProps: {
+                    style: {
+                      borderRadius: "10px",
+                      marginTop: "0px",
+                      marginBottom: "0px",
+                      padding: "0px",
+                       
+                      height: {
+                        xl: "22.5%",
+                        lg: "13.5%",
+                      },
+                    },
+                  },
+                }}
+              >
+                <CustomMenuItem value="Quiero probar la app">
+                  Quiero probar la app
+                </CustomMenuItem>
+                <CustomMenuItem value="Soy inversionista">
+                  Soy inversionista
+                </CustomMenuItem>
+                <CustomMenuItem value=" Quiero formar parte de un proyecto">
+                  Quiero formar parte de un proyecto
+                </CustomMenuItem>
+              </StyledSelect> */}
+               <StyledSelect
+                sx={{ mt: "3%" }}
+  
+                  
+                open={isSelectOpen}  
+                onOpen={() => setIsSelectOpen(true)}  
+                onClose={() => setIsSelectOpen(false)} 
+                   name="category"
+               
                 {...register("category")}
                 value={watch("category")} 
                 label="Categoria"
