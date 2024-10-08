@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import { Box, Typography, useMediaQuery } from "@mui/material";
 
 const Politics = () => {
-  const matches = useMediaQuery("(max-width:600px)");
+  const { isMobile } = useResponsive();
 
   const text="#000000"
   const colors= "#000000"
@@ -14,13 +14,13 @@ const Politics = () => {
     <> 
     <Navbar   sx={{ zIndex: 1}} text={text}/>
     <Box id="top" sx={{ padding: '6%',
-          paddingTop: matches?"12%":'15%',
+          paddingTop: isMobile?"12%":'15%',
           display: 'flex',
-          paddingBottom:matches?"10%":"0%",
+          paddingBottom:isMobile?"10%":"0%",
           flexDirection: 'column',
           justifyContent: 'center',
-          paddingLeft:matches?"10%":"10%",
-          paddingRight:matches?"10%":"10%",
+          paddingLeft:isMobile?"10%":"10%",
+          paddingRight:isMobile?"10%":"10%",
 
           alignItems: 'flex-start',gap:"10px"}}>
       

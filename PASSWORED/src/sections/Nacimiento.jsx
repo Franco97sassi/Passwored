@@ -3,7 +3,7 @@ import Estrella3 from "../assets/images/Estrella3";
 import { Box, Typography, useMediaQuery } from "@mui/material";
 
 const Nacimiento = () => {
-  const matches = useMediaQuery("(max-width:600px)");
+  // const matches = useMediaQuery("(max-width:600px)");
 
   const Content = ({ children, variant, align }) => (
     <Typography

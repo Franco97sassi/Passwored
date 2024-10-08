@@ -1,15 +1,16 @@
  import styles from "./screens.module.css";
-import screen1 from "../assets/box1.png";
-import screen2 from "../assets/screen2.png";
-import screen3 from "../assets/screen3.png";
+import screen1 from "../assets/screen1.svg";
+import screen2 from "../assets/screen2.svg";
+import screen3 from "../assets/screen3.svg";
 import screen4 from "../assets/screen4.png";
-import screen5 from "../assets/screen5.png";
-import screen6 from "../assets/screen6.png";
+import screen5 from "../assets/screen5.svg";
+import screen6 from "../assets/screen6.svg";
 import { Typography, useMediaQuery } from "@mui/material"; 
 import Box from "@mui/material/Box";
+import useResponsive from "../hooks/useResponsive";
 
 const Screens = () => {
-  const matches = useMediaQuery("(max-width:600px)");
+  const { isMobile } = useResponsive();
   const steps = [
     {
       number: "01",
@@ -247,7 +248,7 @@ const Screens = () => {
 
   return (
     <>
-      {!matches ? (
+      {!isMobile ? (
         <Box className={styles.container}
         sx={{
           paddingLeft: { lg: '7%', xl: '10%' },

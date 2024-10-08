@@ -1,9 +1,11 @@
 import CallButton from "../components/CallButton";
 import styles from "./invertir.module.css";
 import { Box, Typography, useMediaQuery } from "@mui/material";
-
+import Phone2 from '../assets/images/Phone2'
+import Button from "../components/CallButton";
+import useResponsive from "../hooks/useResponsive";
 const Invertir = () => {
-  const matches = useMediaQuery("(max-width:600px)");
+  const { isMobile } = useResponsive();
   const teamText = `
   Jóvenes capacitados y comprometidos full time con esta Startup,
   con habilidades acorde a la magnitud del proyecto, la resiliencia
@@ -29,7 +31,7 @@ const readyText = `
 
   return (
     <>
-      {!matches ? (
+      {!isMobile ? (
         <Box className={styles.container}>
           <Typography
             variant="h2"
@@ -103,7 +105,7 @@ const readyText = `
                 {readyText}
               </Typography>
               <Box sx={{ width: "60%" }}>
-                <CallButton className={styles.buttonProps} text="Contactanos" />
+                <Button className={styles.buttonProps} text="Contactanos" Icon={Phone2} />
               </Box>
             </Box>
           </Box>
@@ -171,7 +173,7 @@ const readyText = `
               {readyText}
               </Typography>
               <Box sx={{  width: "100%",pt:"5%" }}>
-                <CallButton className={styles.buttonProps} text="Contactanos" />
+              <Button className={styles.buttonProps} text="Contactanos" Icon={Phone2} />
               </Box>
             </Box>
           </Box>

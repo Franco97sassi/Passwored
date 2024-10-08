@@ -1,0 +1,30 @@
+.sendButton {
+    background-color: #8E2DE2;
+    padding: 19px;
+    margin-left: -10%;
+    width: 50%; /* Por defecto, para xs */
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 50px;
+    color: white;
+    font-size: 20px;
+    border: none;
+    box-shadow: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s; /* Añadir transición para el hover */
+}
+
+/* Estilos para pantallas más grandes */
+@media (min-width: 600px) {
+    .sendButton {
+        width: 17%;
+    }
+}
+
+/* Efecto hover */
+.sendButton:hover {
+    background-color: #7A1FCE; 
+}

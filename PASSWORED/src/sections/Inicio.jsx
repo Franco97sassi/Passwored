@@ -3,18 +3,21 @@ import { Box, Typography, useMediaQuery } from "@mui/material";
 import Navbar from "../components/Navbar";
 import Estrella1 from "../assets/images/Estrella1";
 import Estrella2 from "../assets/images/Estrella2";
-import ButtonRegister from "../components/Button";
+// import ButtonRegister from "../components/Button";
 import fondoInicio from "../assets/fondoInicio.png";
 import fondoInicioColor from "../assets/fondoInicioColor.png";
 import Estrella3 from "../assets/images/Estrella3";
 import fondoInicioPhone from "../assets/backImagePhone.png";
 import fondoInicioColorPhone from "../assets/backPhone.png";
 import styles from "./inicio.module.css";
+import RegisterUser from '../assets/images/RegisterUser'
+import Button from "../components/CallButton";
+import useResponsive from "../hooks/useResponsive";
 
 const Inicio = () => {
   const text="#fff"
 
-  const isMobile = useMediaQuery("(max-width:600px)");
+  const { isMobile } = useResponsive();
   const mainText = isMobile ? (
     <>
       App que
@@ -123,7 +126,9 @@ const Inicio = () => {
               width: isMobile ? "250%" : "100%",
             }}
           >
-            <ButtonRegister className={styles.buttonRegister} />
+            {/* <ButtonRegister className={styles.buttonRegister} /> */}
+            <Button className={styles.buttonRegister} text="Registrarme" Icon={RegisterUser} />
+
           </Box>
         </Box>
 

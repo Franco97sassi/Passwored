@@ -1,7 +1,7 @@
 //  import './App.css'
-import Landing from "./pages/Landing";
+import Landing from "./sections/Landing";
 import { Route, Routes } from "react-router-dom";
-import Politics from "./pages/Politics";
+import Politics from "./sections/Politics";
 import theme from "./theme/theme";
 function App() {
   return (

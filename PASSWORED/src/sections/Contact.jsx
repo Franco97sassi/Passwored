@@ -3,9 +3,10 @@ import Phone from "../assets/images/Phone";
 import MailIcon from "../assets/images/MailIcon";
 import LocationIcon from "../assets/images/LocationIcon";
 import { Box, Typography, useMediaQuery } from "@mui/material";
+import useResponsive from "../hooks/useResponsive";
 
 const Contact = () => {
-  const matches = useMediaQuery("(max-width:600px)");
+  const { isMobile } = useResponsive();
   const contactInfo = [
     {
       icon: <MailIcon />,
@@ -26,7 +27,7 @@ const Contact = () => {
   return (
     <Box
       sx={{
-        height: matches ? "75vh" : "75vh",
+        height: isMobile ? "75vh" : "75vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -58,7 +59,7 @@ const Contact = () => {
               variant="h4"
               sx={{ paddingLeft: { xs: "5%", sm: "1%" } }}
             >
-              {label} {matches && <br />}
+              {label} {isMobile && <br />}
               {value}
             </Typography>
           </Box>

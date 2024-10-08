@@ -2,9 +2,10 @@ import React from "react";
 import rocketgif from "../assets/rocket2.gif";
 import Estrella1 from "../assets/images/Estrella1";
 import { Box, useMediaQuery } from "@mui/material";
+import useResponsive from "../hooks/useResponsive";
 
 const Rocket = () => {
-  const matches = useMediaQuery("(max-width:600px)");
+  const { isMobile } = useResponsive();
   const commonBoxStyles = {
     display: "flex",
     justifyContent: "space-between",
@@ -19,7 +20,7 @@ const Rocket = () => {
   };
   return (
     <>
-      {!matches ? (
+      {!isMobile ? (
         <Box
           sx={{
             ...commonBoxStyles,

@@ -1,7 +1,9 @@
  import styles from "./unete.module.css";
-  import ButtonRegister from "../components/Button";
-  import { Box, Typography, List, ListItem, ListItemText, Button } from '@mui/material';
+  // import ButtonRegister from "../components/Button";
+  import { Box, Typography, List, ListItem, ListItemText   } from '@mui/material';
   import rayoIcon from '../assets/rayoIcon.png'; // Ruta al ícono de rayo
+  import Button from "../components/CallButton";
+  import RegisterUser from '../assets/images/RegisterUser'
 
 const Unete = () => {
   const listItemStyles = {
@@ -74,7 +76,9 @@ const Unete = () => {
           Las primeras 1000 personas que se registren obtendán la App GRATIS
         </Typography  > 
 <Box  sx={{width:"100%" }}>  
-        <ButtonRegister className={styles.buttonRegister} /></Box>
+        {/* <ButtonRegister className={styles.buttonRegister} />  */}
+        <Button className={styles.buttonRegister} text="Registrarme" Icon={RegisterUser} />
+        </Box>
       </Box>
       </Box>
       

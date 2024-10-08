@@ -3,15 +3,16 @@ import React, { useEffect, useState } from "react";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import styles from "./navbar.module.css";
 import PasswordLogo from "../assets/images/PasswordLogo";
-import CallButton from "./CallButton";
+import Button from "./CallButton";
 import menu from "../assets/Menu.png";
 import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { Link } from "react-scroll";
 import Menu from "../assets/images/Menu";
-
+import Phone2 from '../assets/images/Phone2'
+import useScrollPosition from '../hooks/useScrollPosition';
 const Navbar = ({text}) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
+  // const [scrollPosition, setScrollPosition] = useState(0);
   const theme = useTheme();
   const navigate = useNavigate(); 
   const isIphone = useMediaQuery('(max-width: 767px) and (-webkit-min-device-pixel-ratio: 2)');
@@ -20,7 +21,7 @@ const Navbar = ({text}) => {
   const isXl = useMediaQuery(theme.breakpoints.up("xl"));
   const fontSize = isXl ? 26 : isXs ? 16 : 20;
   const matches = useMediaQuery("(max-width:600px)");
-
+  const scrollPosition = useScrollPosition();
   const handleLogoClick = () => {
     window.location.href = "/"; 
   };
@@ -28,18 +29,18 @@ const Navbar = ({text}) => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  useEffect(() => {
-    const handleScroll = () => {
-      const position = window.pageYOffset;
-      setScrollPosition(position);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const position = window.pageYOffset;
+  //     setScrollPosition(position);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
   const isHomePage = location.pathname === "/";
   const linkStyles = {
   padding: "1rem",
@@ -162,8 +163,8 @@ const Navbar = ({text}) => {
               marginLeft: window.innerWidth <= 767 ? '-10%' : '0',  
               paddingTop: window.innerWidth <= 767 ? '5%' : '0',  
             }}>
-                <CallButton className={styles.buttonProps}   />
-              </Link>
+                <Button className={styles.buttonProps} text="Contactanos" Icon={Phone2} />
+                </Link>
             </>
           ) : (
             <>
@@ -181,7 +182,7 @@ const Navbar = ({text}) => {
                   marginLeft: window.innerWidth <= 767 ? '-10%' : '0',  
                   paddingTop: window.innerWidth <= 767 ? '5%' : '0'   
               }}>
-                <CallButton className={styles.buttonProps} text="Contactanos" />
+                <Button className={styles.buttonProps} text="Contactanos" Icon={Phone2} />
               </RouterLink>
             </>
           )}

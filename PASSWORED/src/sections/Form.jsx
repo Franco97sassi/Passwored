@@ -1,4 +1,4 @@
-import SendButton from "../components/SendButton";
+// import SendButton from "../components/SendButton";
 import { useState } from "react";
 import {
   MenuItem,
@@ -8,10 +8,14 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { Box, styled } from "@mui/material";
+import { useForm } from "react-hook-form";
+import styles from "./form.module.css";
+import Button from "../components/CallButton";
+import useResponsive from "../hooks/useResponsive";
 
 const Form = () => {
-  const matches = useMediaQuery("(max-width:600px)");
-   
+  const { isMobile } = useResponsive();
+
   //Estilos
   const StyledTextField = styled(TextField)(({ theme }) => ({
     backgroundColor: "white",
@@ -38,15 +42,15 @@ const Form = () => {
   // }));
 
   const StyledBox = styled(Box)(({ theme }) => ({
-    width:   matches ? "90%" : "37%",
-    height: matches ? "17%" : "15.2%%",  
+    width: isMobile ? "90%" : "37%",
+    height: isMobile ? "17%" : "15.2%%",
     borderRadius: "20px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "flex-start",
     pb: "2%",
-    marginTop: matches ? "5%":"0%"
+    marginTop: isMobile ? "5%" : "0%",
   }));
   const CustomMenuItem = styled(MenuItem)(({ theme }) => ({
     borderRadius: "0px",
@@ -69,8 +73,8 @@ const Form = () => {
     // marginTop: "3%",
     borderRadius: "10px",
     width: "100%",
-      height: {
-        sx:"50%",
+    height: {
+      sx: "50%",
       xl: "50%",
       lg: "60%",
     },
@@ -98,15 +102,15 @@ const Form = () => {
       fontWeight: 400,
     },
   }));
-   
+
   //Apertura
 
   const [isSelectOpen, setIsSelectOpen] = useState(false);
-  const handleSelectFocus = () => {
+  const handleSelectOpen = () => {
     setIsSelectOpen(true);
   };
 
-  const handleSelectBlur = () => {
+  const handleSelectClose = () => {
     setIsSelectOpen(false);
   };
 
@@ -117,45 +121,87 @@ const Form = () => {
   //     [e.target.name]: e.target.value,
   //   });
   // };
-  const [formData, setFormData] = useState({
-    name: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
-    category: "default",
+  const {
+    register,
+    handleSubmit,
+    reset,watch,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      name: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      message: "",
+      category: "Quiero probar la app",
+    },
   });
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
 
-    setFormData({
-      ...formData,
-      [ name]: value,
-    });
-  };
+  //   setFormData({
+  //     ...formData,
+  //     [ name]: value
+  //   });
+  // };
+  // const { register, handleSubmit, reset, formState: { errors } } = useForm({
+  //   defaultValues: {
+  //     name: '',
+  //     lastName: '',
+  //     email: '',
+  //     phone: '',
+  //     message: '',
+  //     category: 'default',
+  //   },
+  // });
+  {
+    errors.name && (
+      <span style={{ color: "red" }}>Este campo es obligatorio</span>
+    );
+  }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await fetch("http://localhost:3001/send-email", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(formData),
+  //     });
+
+  //     if (response.ok) {
+  //       alert("Correo enviado con éxito");
+  //       // Reset form after successful submission
+  //       setFormData({
+  //         name: "",
+  //         lastName: "",
+  //         email: "",
+  //         phone: "",
+  //         message: "",
+  //         category: "default",
+  //       });
+  //     } else {
+  //       alert("Hubo un problema al enviar el correo");
+  //     }
+  //   } catch (error) {
+  //     console.error("Error al enviar el correo:", error);
+  //   }
+  // };
+  const onSubmit = async (data) => {
     try {
       const response = await fetch("http://localhost:3001/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(data),
       });
 
       if (response.ok) {
         alert("Correo enviado con éxito");
-        // Reset form after successful submission
-        setFormData({
-          name: "",
-          lastName: "",
-          email: "",
-          phone: "",
-          message: "",
-          category: "default",
-        });
+        reset(); // Resetear el formulario
       } else {
         alert("Hubo un problema al enviar el correo");
       }
@@ -165,12 +211,12 @@ const Form = () => {
   };
   return (
     <>
-      {!matches ? (
+      {!isMobile ? (
         <Box
           sx={{
             paddingBottom: 0,
             // height: isSelectOpen ? "125vh" : "118vh",
-            height:   "118vh",
+            height: "118vh",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-around",
@@ -188,12 +234,13 @@ const Form = () => {
             brevedad
           </Typography>
           <Box
-            onSubmit={handleSubmit}
+            component="form"
+            onSubmit={handleSubmit(onSubmit)}
             sx={{
               background: "linear-gradient(180deg, #9f6ed7 0%, #fee9b5 100%)",
               width: "89%",
               // height: isSelectOpen ? "95%" : "70%",
-              height:  "70%",
+              height: "70%",
               borderRadius: "20px",
               display: "flex",
               flexWrap: "wrap",
@@ -210,14 +257,13 @@ const Form = () => {
                 Nombre
               </Typography>
               <StyledTextField
-                // sx={{ backgroundColor: "white", borderRadius: "8px" }}
-                 name="name"
-                 placeholder="Juan"
+                {...register("name")}
+                // name="name"
+                placeholder="Juan"
                 //  value={formData.name}
                 //  onChange={handleChange}
-                 variant="outlined"
-                  fullWidth
-
+                variant="outlined"
+                fullWidth
               />
             </StyledBox>
             <StyledBox>
@@ -226,28 +272,33 @@ const Form = () => {
               </Typography>
               <StyledTextField
                 sx={{ backgroundColor: "white", borderRadius: "8px" }}
-                name="lastName"
+                // name="lastName"
                 placeholder="Pérez"
-
+                {...register("lastName")}
                 // value={formData.lastName}
                 // onChange={handleChange}
                 variant="outlined"
                 fullWidth
               />
             </StyledBox>
-            
+
             <StyledBox>
               <Typography variant="body2" sx={{ mb: "-2%" }}>
                 Dropdown Title
               </Typography>
               <StyledSelect
-              sx={{    mt: "3%",
-              }}
-                onFocus={handleSelectFocus}
-                onBlur={handleSelectBlur}
-                name="category"
-                value={formData.category}
-                onChange={handleChange}
+                sx={{ mt: "3%" }}
+                // onOpen={handleSelectFocus}
+                // onBlur={handleSelectBlur}
+
+                onOpen={handleSelectOpen}
+                onClose={handleSelectClose}
+                // defaultValue="Quiero probar la app"
+                  name="category"
+                // value={formData.category}
+                // onChange={handleChange}
+                {...register("category")}
+                value={watch("category")} 
                 label="Categoria"
                 MenuProps={{
                   PaperProps: {
@@ -256,6 +307,7 @@ const Form = () => {
                       marginTop: "0px",
                       marginBottom: "0px",
                       padding: "0px",
+                       
                       height: {
                         xl: "22.5%",
                         lg: "13.5%",
@@ -263,15 +315,14 @@ const Form = () => {
                     },
                   },
                 }}
-                
               >
-                <CustomMenuItem value="default">
+                <CustomMenuItem value="Quiero probar la app">
                   Quiero probar la app
                 </CustomMenuItem>
-                <CustomMenuItem value="investor">
+                <CustomMenuItem value="Soy inversionista">
                   Soy inversionista
                 </CustomMenuItem>
-                <CustomMenuItem value="project">
+                <CustomMenuItem value=" Quiero formar parte de un proyecto">
                   Quiero formar parte de un proyecto
                 </CustomMenuItem>
               </StyledSelect>
@@ -282,13 +333,13 @@ const Form = () => {
               </Typography>
               <StyledTextField
                 sx={{ backgroundColor: "white", borderRadius: "8px" }}
-                name="email"
-                type="email"
+                {...register("email")}
+                // name="email"
+                // type="email"
                 // value={formData.email}
                 // onChange={handleChange}
                 variant="outlined"
                 placeholder="jperez@gmail.com"
-
                 fullWidth
               />
             </StyledBox>
@@ -298,34 +349,33 @@ const Form = () => {
                 position: "relative",
                 transition: "transform 0.3s ease",
                 transform: isSelectOpen ? "translateY(25%)" : "translateY(0%)",
-                 height:"25.2%",
+                height: "25.2%",
                 //  pt:isSelectOpen ? "1%":"2%"
-                mt:"-1%"
+                mt: "-1%",
               }}
             >
               <Typography sx={{ pb: "2%" }} variant="body2">
                 Deja tu duda o inquietud
               </Typography>
               <StyledTextField
-                name="message"
+                {...register("message")}
+                // name="message"
                 // value={formData.message}
                 // onChange={handleChange}
                 variant="outlined"
                 fullWidth
                 sx={{
-height:"100px",
+                  height: "100px",
                   width: "100%",
-                   
+
                   borderRadius: "8px",
                   backgroundColor: "#ffffff",
-                  
-
                 }}
               />
             </StyledBox>
             <StyledBox
               sx={{
-                mt:"-3%",
+                mt: "-3%",
                 position: "relative",
                 transition: "transform 0.3s ease",
                 transform: isSelectOpen ? "translateY(40%)" : "translateY(0%)",
@@ -336,12 +386,12 @@ height:"100px",
               </Typography>
               <StyledTextField
                 sx={{ backgroundColor: "white", borderRadius: "8px" }}
-                name="phone"
+                // name="phone"
+                {...register("phone")}
                 // value={formData.phone}
                 // onChange={handleChange}
                 variant="outlined"
                 placeholder="123456789"
-
                 fullWidth
               />
             </StyledBox>
@@ -354,7 +404,9 @@ height:"100px",
                 transition: "transform 0.3s ease",
               }}
             >
-              <SendButton text="Enviar" onClick={handleSubmit} />{" "}
+                                          <Button className={styles.sendButton} text="Enviar"   />
+
+              {/* <SendButton text="Enviar" type="submit" />{" "} */}
             </Box>
           </Box>
         </Box>
@@ -375,14 +427,14 @@ height:"100px",
           >
             <Typography
               variant="h3"
-              sx={{ pl: "7%", fontWeight: "600", pt: "2%", pb: "2%",pr:"2%" }}
+              sx={{ pl: "7%", fontWeight: "600", pt: "2%", pb: "2%", pr: "2%" }}
             >
               Completá el formulario con tu consulta y te responderemos a la
               brevedad
             </Typography>
             <Box
               component="form"
-              onSubmit={handleSubmit}
+              onSubmit={handleSubmit(onSubmit)}
               sx={{
                 background: "linear-gradient(180deg, #9f6ed7 0%, #fee9b5 100%)",
                 width: "90%",
@@ -394,7 +446,7 @@ height:"100px",
                 alignItems: "center",
                 boxSizing: "border-box",
                 paddingTop: "0%",
-                paddingBottom:matches?"0%": "50%",
+                paddingBottom: isMobile ? "0%" : "50%",
               }}
             >
               <StyledBox>
@@ -402,9 +454,9 @@ height:"100px",
                   Nombre
                 </Typography>
                 <StyledTextField
-                  name="name"
+                  // name="name"
                   placeholder="Juan"
-
+                  {...register("name")}
                   // value={formData.name}
                   // onChange={handleChange}
                   variant="outlined"
@@ -418,10 +470,9 @@ height:"100px",
                 </Typography>
 
                 <StyledTextField
-                  name="name"
+                  // name="name"
                   placeholder="Pérez"
-
-
+                  {...register("lastName")}
                   // value={formData.lastName}
                   // onChange={handleChange}
                   variant="outlined"
@@ -435,9 +486,11 @@ height:"100px",
                 </Typography>
 
                 <StyledSelect
-                  name="category"
-                  value={formData.category}
-                  onChange={handleChange}
+                  // name="category"
+                  {...register("category")}
+                  defaultValue="default"
+                  // value={formData.category}
+                  // onChange={handleChange}
                   label="Categoria"
                   MenuProps={{
                     PaperProps: {
@@ -453,7 +506,6 @@ height:"100px",
                       },
                     },
                   }}
-                  
                 >
                   <CustomMenuItem value="default">
                     Quiero probar la app
@@ -472,13 +524,12 @@ height:"100px",
                   Teléfono
                 </Typography>
                 <StyledTextField
-                  name="phone"
+                  {...register("phone")}
                   // value={formData.name}
                   // onChange={handleChange}
                   variant="outlined"
                   fullWidth
                   placeholder="123456789"
-
                 />
               </StyledBox>
 
@@ -487,12 +538,11 @@ height:"100px",
                   Email
                 </Typography>
                 <StyledTextField
-                  name="email"
+                  {...register("email")}
                   // value={formData.name}
                   // onChange={handleChange}
                   variant="outlined"
                   placeholder="jperez@gmail.com"
-
                   fullWidth
                 />
               </StyledBox>
@@ -503,9 +553,9 @@ height:"100px",
                 <StyledTextField
                   sx={{
                     height: "100px",
-
                   }}
-                  name="message"
+                  // name="message"
+                  {...register("message")}
                   // value={formData.name}
                   // onChange={handleChange}
                   variant="outlined"
@@ -523,8 +573,13 @@ height:"100px",
                   paddingBottom: "15%",
                 }}
               >
-                
-                <SendButton text="Enviar" onClick={handleSubmit} />
+                {/* <SendButton
+                  text="Enviar"
+                  onClick={handleSubmit}
+                  type="submit"
+                /> */}
+                            <Button className={styles.sendButton} text="Enviar"   />
+
               </Box>
             </Box>
           </Box>

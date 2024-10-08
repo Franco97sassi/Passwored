@@ -6,11 +6,18 @@ import logopass from "../assets/logopass.png";
 import { Link } from "react-router-dom";
 import { Box, Typography, IconButton, Link as MuiLink } from "@mui/material";
 
-const Footer = ({ background, width }) => {
+const Footer = ({ background    }) => {
   const handleRedirect = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
   const isHomePage = location.pathname === "/";
+  const SocialIcon = ({ url, Icon }) => {
+    return (
+      <IconButton onClick={() => handleRedirect(url)}>
+        <Icon />
+      </IconButton>
+    );
+  };
 
   return (
     <Box
@@ -95,7 +102,7 @@ const Footer = ({ background, width }) => {
         gap={{ xs: "5vw", md: "1vw" }}
        
       >
-        <IconButton
+        {/* <IconButton
           onClick={() =>
             handleRedirect(
               "https://www.tiktok.com/@passwored.com?_t=8pcX6DH2AUv&_r=1"
@@ -124,7 +131,12 @@ const Footer = ({ background, width }) => {
         </IconButton>
         <IconButton onClick={() => handleRedirect("#")}>
           <YoutubeIcon />
-        </IconButton>
+        </IconButton> */}
+      
+      <SocialIcon url="https://www.tiktok.com/@passwored.com?_t=8pcX6DH2AUv&_r=1" Icon={TiktokIcon} />
+        <SocialIcon url="https://www.instagram.com/passwored.edtech?igsh=MWY2dTNxdmtsY2tmNA==" Icon={InstagramIcon} />
+        <SocialIcon url="https://www.facebook.com/profile.php?id=61565960210607&mibextid=ZbWKwL" Icon={TwitterIcon} />
+        <SocialIcon url="#" Icon={YoutubeIcon} />
       </Box>
     </Box>
   );
