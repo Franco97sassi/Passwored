@@ -4,6 +4,7 @@ import styles from "./politics.module.css";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Box, Typography, useMediaQuery } from "@mui/material";
+import useResponsive from "../hooks/useResponsive";
 
 const Politics = () => {
   const { isMobile } = useResponsive();
