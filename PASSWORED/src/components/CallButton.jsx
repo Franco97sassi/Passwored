@@ -14,8 +14,7 @@
 
 import React from 'react'
   
-// eslint-disable-next-line react/prop-types
-const Button = ({className, text, Icon}) => {
+ const Button = ({className, text, Icon}) => {
   return (
     <div className={className}> {Icon && <Icon   />}{text} </div>
   )

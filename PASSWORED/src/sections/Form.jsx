@@ -5,12 +5,12 @@ import {
   Select,
   TextField,
   Typography,
-  useMediaQuery,
+  useMediaQuery,Button
 } from "@mui/material";
 import { Box, styled } from "@mui/material";
 import { useForm } from "react-hook-form";
 import styles from "./form.module.css";
-import Button from "../components/CallButton";
+// import Button from "../components/CallButton";
 import useResponsive from "../hooks/useResponsive";
 
 const Form = () => {
@@ -102,7 +102,32 @@ const Form = () => {
       fontWeight: 400,
     },
   }));
-
+  const StyledButton = styled(Button)(({ theme }) => ({
+    
+    backgroundColor: "#8E2DE2",
+    padding: "19px",
+    marginLeft: "-10%",
+    width: {
+      xs: "50%", // Para pantallas pequeñas
+      sm: "17%"  // Para pantallas más grandes
+    },
+    height: "auto",
+    display: "flex",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    borderRadius: "50px",
+    color: "white",
+    fontSize: "20px",
+    border: "none",
+    boxShadow: "none",
+    fontFamily: "'Inter', sans-serif",
+    fontWeight: 500,
+    transition: "background-color 0.3s",
+    "&:hover": {
+      backgroundColor: "#7A1FCE",
+    },
+  
+  }));
   //Apertura
 
   const [isSelectOpen, setIsSelectOpen] = useState(false);
@@ -154,12 +179,7 @@ const Form = () => {
   //     category: 'default',
   //   },
   // });
-  {
-    errors.name && (
-      <span style={{ color: "red" }}>Este campo es obligatorio</span>
-    );
-  }
-
+  
   // const handleSubmit = async (e) => {
   //   e.preventDefault();
   //   try {
@@ -190,9 +210,12 @@ const Form = () => {
   //   }
   // };
   const onSubmit = async (data) => {
+    console.log(data)
     try {
-      const response = await fetch("http://localhost:3001/send-email", {
+      const response = await fetch(import.meta.env.VITE_API_URL, {
+        
         method: "POST",
+        
         headers: {
           "Content-Type": "application/json",
         },
@@ -442,7 +465,37 @@ const Form = () => {
                 transition: "transform 0.3s ease",
               }}
             >
-                                          <Button className={styles.sendButton} text="Enviar"   />
+                                          {/* <Button className={styles.sendButton} text="Enviar"   /> */}
+                                          <StyledButton
+  type="submit"
+  variant="contained"
+  sx={{
+    backgroundColor: "#8E2DE2",
+    padding: "19px",
+    marginLeft: "-10%",
+    width: {
+      xs: "50%", // Para pantallas pequeñas
+      sm: "17%"  // Para pantallas más grandes
+    },
+    height: "auto",
+    display: "flex",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    borderRadius: "50px",
+    color: "white",
+    fontSize: "20px",
+    border: "none",
+    boxShadow: "none",
+    fontFamily: "'Inter', sans-serif",
+    fontWeight: 500,
+    transition: "background-color 0.3s",
+    "&:hover": {
+      backgroundColor: "#7A1FCE",
+    },
+  }}
+>
+  Enviar
+</StyledButton>
 
               {/* <SendButton text="Enviar" type="submit" />{" "} */}
             </Box>
@@ -616,8 +669,37 @@ const Form = () => {
                   onClick={handleSubmit}
                   type="submit"
                 /> */}
-                            <Button className={styles.sendButton} text="Enviar"   />
-
+                           <StyledButton
+  type="submit"
+  variant="contained"
+  sx={{
+    backgroundColor: "#8E2DE2",
+    padding: "19px",
+    marginLeft: "-10%",
+    width: {
+      xs: "50%", // Para pantallas pequeñas
+      sm: "17%"  // Para pantallas más grandes
+    },
+    height: "auto",
+    display: "flex",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    borderRadius: "50px",
+    color: "white",
+    fontSize: "20px",
+    border: "none",
+    boxShadow: "none",
+    fontFamily: "'Inter', sans-serif",
+    fontWeight: 500,
+    transition: "background-color 0.3s",
+    "&:hover": {
+      backgroundColor: "#7A1FCE",
+    },
+  }}
+>
+  Enviar
+</StyledButton>
+ 
               </Box>
             </Box>
           </Box>
