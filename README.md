@@ -20,7 +20,7 @@ Passwored is an app that locks access to other apps on your child's phone or tab
 ## Prerequisites
 - Node.js (version 14 or higher)
 - npm
-- 
+  
 ## Stack
 - React.js
 - Material UI
