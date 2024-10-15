@@ -4,10 +4,10 @@
  <img src="https://i.imgur.com/SVrjwVB.png" alt="Fondo" width="100%" />
 </a>
 
-## Description
+## Descripción
 Passwored es una aplicación que bloquea el acceso a otras aplicaciones en el teléfono o tableta de tu hijo.
 
-## Installation
+## Instalación 
 1. Clona el repositorio:
    - git clone
 2.a Navega al directorio del proyecto para el frontend :
