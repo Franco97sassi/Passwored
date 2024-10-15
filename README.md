@@ -5,19 +5,19 @@
 </a>
 
 ## Description
-Passwored is an app that locks access to other apps on your child's phone or tablet.
+Passwored es una aplicación que bloquea el acceso a otras aplicaciones en el teléfono o tableta de tu hijo.
 
 ## Installation
-1. Clone the repository:
+1. Clona el repositorio:
    - git clone
-2.a Navigate to the project directory in the frontend :
+2.a Navega al directorio del proyecto para el frontend :
    - cd PASSWORED
-2.b Navigate to the project directory in the backend :
+2.b Navega al directorio del proyecto para el backend :
    - cd backend 
-3. Install dependencies in both:
+3. Instala las dependencias en el frontend y el backend:
    - npm install
-   - 
-## Prerequisites
+     
+## Requisitos Previos
 - Node.js (version 14 or higher)
 - npm
   
@@ -27,7 +27,7 @@ Passwored is an app that locks access to other apps on your child's phone or tab
 - Node.js
 - Nodemailer
   
-## Contact
+## Contacto
 - **Email:**
 
   franco.sassi97@gmail.com
